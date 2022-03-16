@@ -1,0 +1,295 @@
+.searchauthor-component
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 100px;
+    background-color:rgb(255, 255, 255);
+    padding-bottom: 100px;
+}
+
+
+
+.searchauthor-row
+{
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+}
+
+.cursor 
+{
+    cursor: pointer
+}
+
+.width-up
+{
+    width: 110px;
+}
+
+p { display: inline-block; }
+
+.submit-column
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.searchauthor-column
+{
+   
+}
+
+
+.picture-row
+{
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    margin-right: 100px;
+}
+
+.search-bar
+{
+    background-color: #fff;
+    border-bottom:1px solid #dedede;
+    padding:0px 0px 20px 0px;
+    border-radius:0px;
+}
+
+.label-search-bar-b, .label-search-bar {
+    font-size: 15px;
+    margin-bottom:5px;
+}
+
+.label-search-bar-b {
+    margin-top:10px;
+    
+    
+}
+
+.searchauthor-column.button {
+    margin-top:25px;
+    width:100%;
+    
+    text-align:right!important;
+}
+
+
+#root > div > div.container > div > div.search-author-right-panel.col-sm-8 > form > div > div:nth-child(1) > div > select, #root > div > div.container > div > div.search-author-right-panel.col-sm-8 > form > div > div:nth-child(2) > div > input[type=number], #root > div > div.container > div > div.search-author-right-panel.col-sm-8 > form > div > div:nth-child(2) > div:nth-child(2) > input[type=date] {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.search_author-image {
+    
+}
+
+.image_container {
+    width: 100px !important;
+    height: 100px !important;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%x;
+    border-radius: 50%;
+    background-size: 100px 100px;
+}
+
+.search_author-image > img {
+}
+
+#root > div > div.container > div > div.search-author-right-panel.col-sm-8 > div > div > div > div.col-sm-5 > h4 {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+}
+
+
+#root > div > div.container > div > div.search-author-right-panel.col-sm-8 > div > div > div > div.col-sm-5 > div > div > span {
+    font-weight: 600 !important;
+}
+
+.search_author-text {
+    font-size:14px!important;
+}
+.search_author-text.col-sm-8 {
+    max-width:100%!important;
+}
+
+div.line {
+    border-bottom:1px solid #dedede;
+    height:2px;
+    padding-bottom:15px;
+}
+
+.search_author-image.col-sm-2 {
+    padding-left:0px!important;
+}
+
+.author_search_results.col-sm-12 {
+    margin-top:25px;
+    padding-left:0px!important;
+}
+
+.author_booking_link > a {
+    font-size: 16px !important;
+    padding:0px!important;
+    font-weight:600!important;
+    
+}
+
+.author_booking_link.col-sm-3 {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    text-align:right!important;
+}
+div.author_rating {
+    font-size: 14px !important;
+    text-align: right !important;
+}
+
+.author_price {
+    text-align:right!important;
+}
+
+.author_rating_price {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.MuiRating-root {
+    color: #1e7e34!important;
+    cursor: pointer;
+    display: inline-flex;
+    position: relative;
+    font-size: 1.5rem;
+    text-align: left;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#root > div > div.container > div > div.search-author-right-panel.col-sm-8 > div > div:nth-child(1) > div > div.author_rating_price.col-sm-3 > div.author_rating > span {
+    
+}
+
+.searchauth-row {
+    margin-top: 15px;
+}
+
+#root > div > div.container > div > div.search-author-right-panel.col-sm-8 > form > div > div > div > div.css-2b097c-container > div > div.css-g1d714-ValueContainer > div.css-1uccc91-singleValue {
+    top: 50% !important;
+}
+
+#root > div > div.container > div > div.search-author-right-panel.col-sm-8 > form > div > div.searchauthor-row.searchauth-row > div > input[type=number], #root > div > div.container > div > div.search-author-right-panel.col-sm-8 > form > div > div.searchauthor-row.searchauth-row > div:nth-child(2) > input[type=date] {
+    width: 100% !important;
+    background-color: hsl(0, 0%, 100%);
+    border-color: hsl(0, 0%, 80%);
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    cursor: default;
+    min-height: 38px;
+    outline: 0 !important;
+    padding-left:10px!important;
+}
+
+/*tooltip*/
+
+
+
+.kow-div, .aoe-div, .language-div {
+    float: left !important;
+    
+}
+
+.kow-div, .aoe-div {
+    width: 200px !important;
+}
+
+.language-div {
+    width:120px!important;
+}
+
+.tooltip-title {
+    font-size: 16px;
+    font-weight: 500;
+    
+}
+
+.img-left-cont {
+    
+}
+
+.icon-top-right {
+    float: right !important;
+    margin-top: -65px !important;
+    margin-right: 25px !important;
+}
+
+   
+
+    
+    .tooltip-cont {
+        background-color: #f1f1f1 !important;
+    }
+
+.user-info-tooltip {
+    border-left: 0px solid #999;
+    padding-left: 25px;
+    margin-left: 25px !important;
+    background-color: #fff !important;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius:2px;
+}
+
+.tooltip-img {
+    padding-right:0px!important;
+}
+
+.__react_component_tooltip {
+    visibility: visible !important;
+    background: transparent !important;
+}
+
+    .__react_component_tooltip.show {
+        opacity: 1 !important;
+        margin-top:80px!important
+    }
+
+    .__react_component_tooltip::before, .__react_component_tooltip::after {
+        display: none !important;
+    }
+
+
+
+    .__react_component_tooltip.place-top::before {
+        display: none !important;
+    }
+
+    .__react_component_tooltip.place-bottom::before {
+        display: none !important;
+    }
+
+    .__react_component_tooltip.place-left::before {
+        display: none !important;
+    }
+
+    .__react_component_tooltip.place-right::before {
+        display:none!important;
+    }
+
+    .__react_component_tooltip .multi-line {
+        display: block;
+        padding: 2px 0;
+        text-align: center;
+    }

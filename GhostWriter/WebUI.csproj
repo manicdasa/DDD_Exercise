@@ -1,0 +1,305 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+    <IsPackable>false</IsPackable>
+    <SpaRoot>ClientApp\</SpaRoot>
+    <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
+    <RootNamespace>GhostWriter.WebUI</RootNamespace>
+    <AssemblyName>WebUI</AssemblyName>
+    <NoWin32Manifest>true</NoWin32Manifest>
+    <UserSecretsId>96179452-02c1-411b-9493-265e6d3a4d93</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Copyleaks" Version="1.7.0" />
+    <PackageReference Include="IbanNet" Version="4.4.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="5.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="5.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.13" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="5.0.2" />
+    <PackageReference Include="NSwag.AspNetCore" Version="13.9.4" />
+    <PackageReference Include="NSwag.MSBuild" Version="13.9.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Sentry.AspNetCore" Version="3.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Don't publish the SPA source files, but do show them in the project files list -->
+    <Compile Remove="ClientApp\**" />
+    <Content Remove="$(SpaRoot)**" />
+    <Content Remove="ClientApp\**" />
+    <EmbeddedResource Remove="ClientApp\**" />
+    <None Remove="$(SpaRoot)**" />
+    <None Remove="ClientApp\**" />
+    <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="ClientApp\.env" />
+    <None Remove="ClientApp\.eslintrc.json" />
+    <None Remove="ClientApp\.gitignore" />
+    <None Remove="ClientApp\package-lock.json" />
+    <None Remove="ClientApp\package-lock.json.orig" />
+    <None Remove="ClientApp\package.json" />
+    <None Remove="ClientApp\public\images\author.svg" />
+    <None Remove="ClientApp\public\images\Code3profit_LOGO.png" />
+    <None Remove="ClientApp\public\images\CreateProject\create_project.png" />
+    <None Remove="ClientApp\public\images\FAQ\FAQ_toReplace.png" />
+    <None Remove="ClientApp\public\images\FAQ\tos.png" />
+    <None Remove="ClientApp\public\images\GHWLogo.png" />
+    <None Remove="ClientApp\public\images\HowDoesThisWork\1.png" />
+    <None Remove="ClientApp\public\images\HowDoesThisWork\1_toBeChanged.png" />
+    <None Remove="ClientApp\public\images\HowDoesThisWork\2.png" />
+    <None Remove="ClientApp\public\images\HowDoesThisWork\2_toBeChanged.png" />
+    <None Remove="ClientApp\public\images\HowDoesThisWork\3.png" />
+    <None Remove="ClientApp\public\images\HowDoesThisWork\3_toBeChanged.png" />
+    <None Remove="ClientApp\public\images\HowDoesThisWork\4.png" />
+    <None Remove="ClientApp\public\images\HowDoesThisWork\4_toBeChanged.png" />
+    <None Remove="ClientApp\public\images\HowDoesThisWork\ar.png" />
+    <None Remove="ClientApp\public\images\landing_back.jpg" />
+    <None Remove="ClientApp\public\images\Layout\header_image.png" />
+    <None Remove="ClientApp\public\images\Login\account-created.png" />
+    <None Remove="ClientApp\public\images\Login\desktop.png" />
+    <None Remove="ClientApp\public\images\Login\desktop1.png" />
+    <None Remove="ClientApp\public\images\Login\desktop2.png" />
+    <None Remove="ClientApp\public\images\Login\desktop3.png" />
+    <None Remove="ClientApp\public\images\Login\email-confirmed.png" />
+    <None Remove="ClientApp\public\images\Login\login_background.png" />
+    <None Remove="ClientApp\public\images\Login\login_image.png" />
+    <None Remove="ClientApp\public\images\Login\payment.png" />
+    <None Remove="ClientApp\public\images\logo-web.png" />
+    <None Remove="ClientApp\public\images\logo-web1.png" />
+    <None Remove="ClientApp\public\images\loupeToBeChanged.jpg" />
+    <None Remove="ClientApp\public\images\mobile-logo.png" />
+    <None Remove="ClientApp\public\images\nobids.png" />
+    <None Remove="ClientApp\public\images\nooffers.png" />
+    <None Remove="ClientApp\public\images\nooffers2.png" />
+    <None Remove="ClientApp\public\images\nooffers_ac.png" />
+    <None Remove="ClientApp\public\images\nooffers_ar.png" />
+    <None Remove="ClientApp\public\images\nooffers_ar1.png" />
+    <None Remove="ClientApp\public\images\nooffers_op.png" />
+    <None Remove="ClientApp\public\images\profileToBeChanged.png" />
+    <None Remove="ClientApp\public\images\RegisterAuthor\author_register.png" />
+    <None Remove="ClientApp\public\images\RegisterAuthor\becomeAuthor_toReplace.png" />
+    <None Remove="ClientApp\public\images\RegisterAuthor\def-img.png" />
+    <None Remove="ClientApp\public\images\RegisterUser\user_register.png" />
+    <None Remove="ClientApp\public\images\signupGraphics.png" />
+    <None Remove="ClientApp\public\images\toBeChanged.png" />
+    <None Remove="ClientApp\public\images\toBeChangedArrow.png" />
+    <None Remove="ClientApp\public\images\toBeChangedCreateProject.png" />
+    <None Remove="ClientApp\public\images\toBeChangedLogin.png" />
+    <None Remove="ClientApp\public\images\toBeChangedSearchAuthor.png" />
+    <None Remove="ClientApp\public\index.html" />
+    <None Remove="ClientApp\public\logo.ico" />
+    <None Remove="ClientApp\public\manifest.json" />
+    <None Remove="ClientApp\public\script.js" />
+    <None Remove="ClientApp\README.md" />
+    <None Remove="ClientApp\src\App.tsx" />
+    <None Remove="ClientApp\src\axios\key.ts" />
+    <None Remove="ClientApp\src\components\AdminDashboard\AdminColumns.tsx" />
+    <None Remove="ClientApp\src\components\AdminDashboard\AdminLogin.tsx" />
+    <None Remove="ClientApp\src\components\AdminDashboard\Dashboard.tsx" />
+    <None Remove="ClientApp\src\components\AdminDashboard\DashboardConcreteProject.tsx" />
+    <None Remove="ClientApp\src\components\AdminDashboard\DashboardUnpaidProjects.tsx" />
+    <None Remove="ClientApp\src\components\AdminDashboard\DataTableComponent.tsx" />
+    <None Remove="ClientApp\src\components\AdminDashboard\Sidebar.tsx" />
+    <None Remove="ClientApp\src\components\AdminDashboard\SidebarWrapper.tsx" />
+    <None Remove="ClientApp\src\components\AdminDashboard\SubMenu.tsx" />
+    <None Remove="ClientApp\src\components\AdminNavMenu.tsx" />
+    <None Remove="ClientApp\src\components\AuthenticateNavMenu.css" />
+    <None Remove="ClientApp\src\components\AuthenticateNavMenu.tsx" />
+    <None Remove="ClientApp\src\components\AuthorProfile\AuthorInformation.tsx" />
+    <None Remove="ClientApp\src\components\AuthorProfile\AuthorOffers.tsx" />
+    <None Remove="ClientApp\src\components\AuthorProfile\AuthorProjects.tsx" />
+    <None Remove="ClientApp\src\components\AuthorProfile\AuthorPublicInformation.tsx" />
+    <None Remove="ClientApp\src\components\AuthorProfile\ChatComponent.tsx" />
+    <None Remove="ClientApp\src\components\AuthorProfile\OpenBookingPage.tsx" />
+    <None Remove="ClientApp\src\components\AuthorProfile\OpenProjectPage.tsx" />
+    <None Remove="ClientApp\src\components\AuthorProfile\OpenProposalPage.tsx" />
+    <None Remove="ClientApp\src\components\AuthorProfile\Profile.tsx" />
+    <None Remove="ClientApp\src\components\Auth\EditAuthorProfile.tsx" />
+    <None Remove="ClientApp\src\components\Auth\EmailConfirmed.tsx" />
+    <None Remove="ClientApp\src\components\Auth\PasswordReset.tsx" />
+    <None Remove="ClientApp\src\components\Auth\Register.tsx" />
+    <None Remove="ClientApp\src\components\Auth\RegisterAuthor.tsx" />
+    <None Remove="ClientApp\src\components\Auth\SignIn.tsx" />
+    <None Remove="ClientApp\src\components\Auth\SignInOrRegister.tsx" />
+    <None Remove="ClientApp\src\components\Auth\SuccesfullyCreatedAccount.tsx" />
+    <None Remove="ClientApp\src\components\Common\BidsOffersComponent.tsx" />
+    <None Remove="ClientApp\src\components\Common\PrepopulateSearchProjects.tsx" />
+    <None Remove="ClientApp\src\components\Common\RedirectComponent.tsx" />
+    <None Remove="ClientApp\src\components\Common\SearchableProjects.tsx" />
+    <None Remove="ClientApp\src\components\Counter.tsx" />
+    <None Remove="ClientApp\src\components\CreateProject.tsx" />
+    <None Remove="ClientApp\src\components\CustomerProfile\AssignProjectToAuthor.tsx" />
+    <None Remove="ClientApp\src\components\CustomerProfile\AuthorInfo.tsx" />
+    <None Remove="ClientApp\src\components\CustomerProfile\CustomerChatComponent.tsx" />
+    <None Remove="ClientApp\src\components\CustomerProfile\CustomerInformations.tsx" />
+    <None Remove="ClientApp\src\components\CustomerProfile\CustomerOffers.tsx" />
+    <None Remove="ClientApp\src\components\CustomerProfile\CustomerOpenBookingPage.tsx" />
+    <None Remove="ClientApp\src\components\CustomerProfile\CustomerOpenProjectPage.tsx" />
+    <None Remove="ClientApp\src\components\CustomerProfile\CustomerProfile.tsx" />
+    <None Remove="ClientApp\src\components\CustomerProfile\CustomerProjects.tsx" />
+    <None Remove="ClientApp\src\components\CustomerProfile\EditProjectComponent.tsx" />
+    <None Remove="ClientApp\src\components\ErrorBoundary.tsx" />
+    <None Remove="ClientApp\src\components\FAQ.tsx" />
+    <None Remove="ClientApp\src\components\FetchData.tsx" />
+    <None Remove="ClientApp\src\components\Helpers\SignalRMiddleware.tsx" />
+    <None Remove="ClientApp\src\components\HowDoesThisWork.tsx" />
+    <None Remove="ClientApp\src\components\LandingPage.tsx" />
+    <None Remove="ClientApp\src\components\Layout\AdminLayout.css" />
+    <None Remove="ClientApp\src\components\Layout\AdminLayout.tsx" />
+    <None Remove="ClientApp\src\components\Layout\AlertTemplate.tsx" />
+    <None Remove="ClientApp\src\components\Layout\AuthenticationLayout.css" />
+    <None Remove="ClientApp\src\components\Layout\AuthenticationLayout.tsx" />
+    <None Remove="ClientApp\src\components\Layout\AuthorLandingPageReadMore.tsx" />
+    <None Remove="ClientApp\src\components\Layout\CustomerAuthorLandingInfo.tsx" />
+    <None Remove="ClientApp\src\components\Layout\CustomerLandingPageReadMore.tsx" />
+    <None Remove="ClientApp\src\components\Layout\images\1.jpg" />
+    <None Remove="ClientApp\src\components\Layout\images\header_image.png" />
+    <None Remove="ClientApp\src\components\Layout\images\landing_back.jpg" />
+    <None Remove="ClientApp\src\components\Layout\LandingPageLayout.css" />
+    <None Remove="ClientApp\src\components\Layout\LandingPageLayout.tsx" />
+    <None Remove="ClientApp\src\components\Layout\MainLayout.css" />
+    <None Remove="ClientApp\src\components\Layout\MainLayout.tsx" />
+    <None Remove="ClientApp\src\components\MobileComponent.tsx" />
+    <None Remove="ClientApp\src\components\NavMenu.css" />
+    <None Remove="ClientApp\src\components\NavMenu.tsx" />
+    <None Remove="ClientApp\src\components\Payment.tsx" />
+    <None Remove="ClientApp\src\components\RequestBooking.tsx" />
+    <None Remove="ClientApp\src\components\SearchAuthor.tsx" />
+    <None Remove="ClientApp\src\components\SuccesfullyCreatedProject.tsx" />
+    <None Remove="ClientApp\src\components\Support.tsx" />
+    <None Remove="ClientApp\src\components\TOS.tsx" />
+    <None Remove="ClientApp\src\custom.css" />
+    <None Remove="ClientApp\src\globals.d.ts" />
+    <None Remove="ClientApp\src\index.tsx" />
+    <None Remove="ClientApp\src\react-app-env.d.ts" />
+    <None Remove="ClientApp\src\registerServiceWorker.ts" />
+    <None Remove="ClientApp\src\services\AdminServices.tsx" />
+    <None Remove="ClientApp\src\services\AuthorServices.tsx" />
+    <None Remove="ClientApp\src\services\CustomerServices.tsx" />
+    <None Remove="ClientApp\src\services\DisputeServices.tsx" />
+    <None Remove="ClientApp\src\services\ErrorServices.js" />
+    <None Remove="ClientApp\src\services\ErrorServices.js.map" />
+    <None Remove="ClientApp\src\services\LookupServices.tsx" />
+    <None Remove="ClientApp\src\services\NotificationServices.tsx" />
+    <None Remove="ClientApp\src\services\PaymentService.tsx" />
+    <None Remove="ClientApp\src\services\ProfileServices.tsx" />
+    <None Remove="ClientApp\src\services\ProjectServices.tsx" />
+    <None Remove="ClientApp\src\services\ProposalServices.tsx" />
+    <None Remove="ClientApp\src\services\UserServices.tsx" />
+    <None Remove="ClientApp\src\store\AdminDashboard.tsx" />
+    <None Remove="ClientApp\src\store\AssignProjectReducer.tsx" />
+    <None Remove="ClientApp\src\store\Auth.ts" />
+    <None Remove="ClientApp\src\store\AuthorActiveProjectsReducer.tsx" />
+    <None Remove="ClientApp\src\store\AuthorInformationsReducer.ts" />
+    <None Remove="ClientApp\src\store\AuthorOffersReducer.tsx" />
+    <None Remove="ClientApp\src\store\ChatComponentReducer.tsx" />
+    <None Remove="ClientApp\src\store\configureStore.ts" />
+    <None Remove="ClientApp\src\store\ConnectionReducer.tsx" />
+    <None Remove="ClientApp\src\store\Counter.ts" />
+    <None Remove="ClientApp\src\store\CreateProjectReducer.tsx" />
+    <None Remove="ClientApp\src\store\CustomerReducer.tsx" />
+    <None Remove="ClientApp\src\store\index.ts" />
+    <None Remove="ClientApp\src\store\LandingPageReducer.ts" />
+    <None Remove="ClientApp\src\store\NotificationReducer.tsx" />
+    <None Remove="ClientApp\src\store\RequestBookingReducer.tsx" />
+    <None Remove="ClientApp\src\store\SearchAuthorReducer.ts" />
+    <None Remove="ClientApp\src\store\SidePanelReducer.tsx" />
+    <None Remove="ClientApp\src\store\SignInReducer.ts" />
+    <None Remove="ClientApp\src\store\store.ts" />
+    <None Remove="ClientApp\src\store\WeatherForecasts.ts" />
+    <None Remove="ClientApp\src\styles\AdminLogin.css" />
+    <None Remove="ClientApp\src\styles\AlertTemplate.css" />
+    <None Remove="ClientApp\src\styles\AuthorInformations.css" />
+    <None Remove="ClientApp\src\styles\AuthorOffers.css" />
+    <None Remove="ClientApp\src\styles\AuthorProjects.css" />
+    <None Remove="ClientApp\src\styles\CreateProject.css" />
+    <None Remove="ClientApp\src\styles\CustomerInformations.css" />
+    <None Remove="ClientApp\src\styles\Dashboard.css" />
+    <None Remove="ClientApp\src\styles\HowDoesThisWork.css" />
+    <None Remove="ClientApp\src\styles\LandingPage.css" />
+    <None Remove="ClientApp\src\styles\Profile.css" />
+    <None Remove="ClientApp\src\styles\Register.css" />
+    <None Remove="ClientApp\src\styles\RegisterAuthor.css" />
+    <None Remove="ClientApp\src\styles\RequestBooking.css" />
+    <None Remove="ClientApp\src\styles\SearchAuthor.css" />
+    <None Remove="ClientApp\src\styles\SearchAuthor.css.orig" />
+    <None Remove="ClientApp\src\styles\Sidebar.css" />
+    <None Remove="ClientApp\src\styles\Sidebar.css.orig" />
+    <None Remove="ClientApp\src\styles\SignIn.css" />
+    <None Remove="ClientApp\tsconfig.json" />
+    <None Remove="Content\EmailTemplates\confirmEmail.html" />
+    <None Remove="Content\EmailTemplates\resetPassword.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Content\EmailTemplates\confirmEmail.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Content\EmailTemplates\resetPassword.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Application\Application.csproj" />
+    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\api\" />
+    <Folder Include="wwwroot\images\profile-pictures\" />
+  </ItemGroup>
+  
+  <Target Name="NSwag" AfterTargets="Build" Condition="'$(Configuration)' == 'Debug'">
+    <Copy SourceFiles="@(Reference)" DestinationFolder="$(OutDir)References" />
+    <!--<Exec Command="$(NSwagExe_Net50) run /variables:Configuration=$(Configuration)" />-->
+    <RemoveDir Directories="$(OutDir)References" />
+  </Target>
+
+  <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
+    <!-- Ensure Node.js is installed -->
+    <Exec Command="node --version" ContinueOnError="true">
+      <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+    </Exec>
+    <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
+    <Message Importance="high" Text="Restoring dependencies using 'npm'. This may take several minutes..." />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+  </Target>
+
+  <Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">
+    <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build" />
+
+    <!-- Include the newly-built files in the publish output -->
+    <ItemGroup>
+      <DistFiles Include="$(SpaRoot)build\**; $(SpaRoot)build-ssr\**" />
+      <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+        <RelativePath>%(DistFiles.Identity)</RelativePath>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      </ResolvedFileToPublish>
+    </ItemGroup>
+  </Target>
+
+</Project>

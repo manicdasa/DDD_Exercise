@@ -1,0 +1,281 @@
+﻿.register-author-box {
+
+    padding: 20px;
+    margin-top: 50px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 10px;
+    
+}
+
+.form-group-name.col-sm-6, .form-group-username.col-sm-6, .form-group-email.col-sm-6, .form-group-pass.col-sm-6 {
+    float: left;
+    margin-top: 15px;
+}
+
+.degree.col-sm-12, .language.col-sm-12, .area.col-sm-12, .price-group.col-sm-12 {
+    margin-top: 15px;
+}
+
+.register-author-left-panel {
+    background-color: white;
+    padding: 20px;
+}
+
+.register-author-right-panel {
+    background-color: white;
+    padding: 10px;
+    border-left:1px solid #f1f1f1;
+}
+
+    .register-author-right-panel.edit-author-profile {
+        border-left: 0px solid #f1f1f1;
+        
+    }
+
+.edit-auth-form {
+    padding: 0 35px 35px 35px;
+}
+
+    .edit-auth-form > div > label {
+        font-size:15px!important;
+    }
+
+    .register-author-image-upload-placeholder {
+        background-color: white;
+        height: 150px;
+    }
+
+.edit-auth-profile-h {
+    margin-left: 50px;
+}
+
+.edit-author-profile-btn-cont {
+    float:left;
+    margin-top: 35px;
+    margin-bottom:50px;
+}
+
+.register-author-languages {
+    background-color: blueviolet;
+    padding: 10px;
+}
+
+.register-author-area-of-expertise {
+    background-color: blueviolet;
+    padding: 10px;
+}
+
+.register-author-create-profile {
+    background-color: white;
+}
+
+.del {
+    color:white;
+    clear:both;
+    margin-bottom:0px!important;
+}
+
+#register_author_price_per_page.form-control {
+    margin-left:10px;
+}
+
+.price-text {
+
+    font-size: 14px;
+    line-height: 17px;
+    margin-left:30px;
+
+}
+
+.description.col-sm-8 {
+    font-size: 14px;
+    line-height: 17px;
+}
+.no.col-sm-6, .yes.col-sm-6 {
+    float: left;
+    padding-left:0!important;
+}
+
+.description.col-sm-8, .form-group-check.col-sm-4 {
+    float: left;
+}
+    .description.col-sm-8 {
+        padding-left:0px!important;
+        padding-right:0px!important;
+    }
+
+    #register_author_direct_booking_allow, #register_author_direct_booking_disallow {
+        width: 16px;
+        float: left;
+    }
+p.yesno {
+    margin-left:45px;
+    padding-top:6px;
+}
+
+p.descp {
+    padding-top:5px;
+    padding-left:27px;
+}
+
+div.no {
+    margin-top:-7px;
+}
+
+#root > div > div > div > div.register-author-right-panel.col-sm-8 > div.price-group.col-sm-12 > label, #root > div > div > div > div.register-author-right-panel.col-sm-8 > div:nth-child(15) > label {
+    font-weight: 700 !important;
+}
+
+#root > div > div > div > div.register-author-right-panel.col-sm-8 > div.price-group.col-sm-12 > label {
+    margin-top:25px!important;
+}
+
+#root > div > div > div > div.register-author-right-panel.col-sm-8 > div.register-author-create-profile.col-sm-12 > div.terms > input[type=checkbox] {
+    margin-right:15px!important;
+}
+
+.register-author-create-profile.col-sm-12 {
+    margin-top:55px!important;
+
+}
+
+input[type=file]{
+    width:100px;
+    color:transparent;
+}
+
+.register-author-username {
+    cursor: pointer;
+    color: red;
+}
+
+.button-position {
+    padding-top: 40px;
+}
+
+.upload-form-container {
+    float: right !important;
+    margin-right: 20px !important;
+    margin-top: 27px !important;
+    background-color: #f1f1f1;
+    padding: 27px;
+    width: 490px;
+    border-radius: 4px;
+}
+
+.empty-img-container-author {
+    background-color: #f1f1f1 !important;
+    border-radius: 50% !important;
+    height: 150px !important;
+    width: 150px !important;
+    float: left !important;
+    background-image: url("/images/RegisterAuthor/def-img.png") !important;
+    background-size: 150px !important;
+    background-position-y: 8px !important;
+    background-repeat: no-repeat !important;
+    opacity: 0.2 !important;
+    border: 1px solid #a0a0a0 !important;
+    margin-left: 15px !important;
+    position: absolute;
+}
+
+.upload-image {
+    border-radius: 50% !important;
+    margin-left:15px!important;
+}
+
+.label-img-name {
+    width:150px!important;
+}
+
+.clr {
+    clear: both !important;
+    margin-bottom:30px!important;
+}
+
+.upload-img {
+    margin-top: 35px !important;
+    
+}
+
+#fileupload {
+    font-size:14px!important;
+}
+
+.assigment-deadline-input {
+    margin-top: 20px;
+}
+
+.accept-tos {
+    color: #4E74DE;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.btn-edit-auth-profile {
+    float: left;
+}
+
+.button-change-profile-picture {
+    border-radius: 50% !important;
+    position: absolute;
+    margin-left: 120px !important;
+    margin-top: 120px;
+}
+
+#root > div.layout-box > div.container > div.register-author-box.row > div.register-author-right-panel.col-sm-8 > form > div.upload-img >div.register-author-image-upload-placeholder > div.form-group > div > button.button-edit.button-change-profile-picture.btn.btn-secondary {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+#root > div.layout-box > div.container > div.register-author-box.row > div.register-author-right-panel.col-sm-8 > form > div.area.col-sm-12 > div.css-2b097c-container > div.css-yk16xz-control > div.css-g1d714-ValueContainer {
+    top: 0px !important;
+}
+
+/*avatar upload popup*/
+
+#root > div > div.container > div > div.register-author-right-panel.col-sm-8 > form > div.upload-img > div.register-author-image-upload-placeholder > div > div.rce-popup-wrapper > div, #root > div > div.container > div > div:nth-child(2) > div > div:nth-child(1) > div > div.column-style.center-style > div > div {
+    width: 95vw !important;
+    height: auto !important;
+}
+
+    #root > div > div.container > div > div.register-author-right-panel.col-sm-8 > form > div.upload-img > div.register-author-image-upload-placeholder > div > div.rce-popup-wrapper > div > div.rce-popup-content > div > div > div, #root > div > div.container > div > div:nth-child(2) > div > div:nth-child(1) > div > div.column-style.center-style > div > div > div.rce-popup-content > div > div > div {
+        width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        height: inherit !important;
+    }
+
+    #root > div > div.container > div > div.register-author-right-panel.col-sm-8 > form > div.upload-img > div.register-author-image-upload-placeholder > div > div.rce-popup-wrapper > div > div.rce-popup-content, #root > div > div.container > div > div:nth-child(2) > div > div:nth-child(1) > div > div.column-style.center-style > div > div > div.rce-popup-content {
+        height: 100% !important;
+    }
+
+.div > canvas {
+    height:100%!important;
+    width:100%!important;
+    position:inherit!important;
+}
+
+
+
+#root > div > div.container > div > div.register-author-right-panel.col-sm-8 > form > div.upload-img > div.register-author-image-upload-placeholder > div > div.rce-popup-wrapper > div > div.rce-popup-content > div > div, #root > div > div.container > div > div.register-author-right-panel.col-sm-8 > form > div.upload-img > div.register-author-image-upload-placeholder > div > div.rce-popup-wrapper > div > div.rce-popup-content > div {
+    height: 100% !important;
+}
+
+#root > div > div.container > div > div.register-author-right-panel.col-sm-8 > form > div.upload-img > div.register-author-image-upload-placeholder > div > div.rce-popup-wrapper > div > div.rce-popup-footer > button, #root > div > div.container > div > div:nth-child(2) > div > div:nth-child(1) > div > div.column-style.center-style > div > div > div.rce-popup-footer > button {
+    font-size: 16px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.rce-button.transparent.close-btn-ava {
+    font-size: 16px;
+    color: #4E74DE !important;
+}
+
+
+.alert-create-autor-page {
+    
+    
+}

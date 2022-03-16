@@ -1,0 +1,139 @@
+.center-padding
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 150px;
+}
+
+.field-colorchange
+{
+    color: red !important;
+    font-size: small;
+}
+
+.select-wrap {
+  border: 1px solid #777;
+  border-radius: 4px;
+  padding: 0 5px;
+  /*width:200px; */
+  background-color:#fff;
+  position:relative;
+}
+.select-wrap label{
+  font-size:8px;
+  text-transform: uppercase;
+  color: #777;
+  padding: 0 8px;  
+  position: absolute;
+  top:6px;
+}
+
+.label-wrap{
+  background-color: #fff;
+  border:0px;
+  height:50px;
+  font-size: 16px;
+  width: 100%;
+  padding-top:4px!important;
+}
+
+#root > div > div > div > form > div > div > div > div.css-yk16xz-control {
+    border:0px!important;
+    margin-top:0px!important;
+}
+
+#root > div > div > div > form > div > div > div > div > div.css-g1d714-ValueContainer {
+    padding:0px!important;
+    font-size:15px;
+}
+
+    
+    .css-1okebmr-indicatorSeparator {
+        width: 0px !important;
+    }
+
+#root > div > div > div > form > div > div > div > div > div.css-g1d714-ValueContainer > div.css-1wa3eu0-placeholder {
+    /*top: 7px !important;*/
+    margin-left: 5px !important;
+}
+#root > div > div > div > form > div > div > div.label-wrap.css-2b097c-container {
+    top: 17px !important;
+    height: auto !important;
+    border: 0px !important;
+}
+
+#root > div > div > div > form > div > div > div > div > div.css-1hb7zxy-IndicatorsContainer > div {
+    padding:0px!important;
+    /*margin-bottom:18px!important; */
+}
+
+.center-padding-landing-page {
+    margin-top:15vh!important;
+}
+
+.landing_title, .how-container {
+    text-align: center !important;
+}
+
+.css-1uccc91-singleValue{
+    /*top:24%!important; */
+    margin-left:5px!important;
+}
+
+.label-wrap.landing-right {
+    height:auto!important;
+    margin-top:25px!important;
+    padding-left:5px;
+
+}
+
+#root > div > div.container > div > div > div > div > div > div.tab-pane.active > div > div > form > div > div.select-wrap.in > div > div > div.css-g1d714-ValueContainer > div.css-1uccc91-singleValue, #root > div > div.container > div > div:nth-child(2) > div > div:nth-child(2) > div > div.tab-pane.active > div > div > form > div > div:nth-child(2) > div > div > div.css-g1d714-ValueContainer > div.css-1uccc91-singleValue {
+    top: 50% !important;
+}
+
+#root > div > div > div > form > div > div > input {
+    margin-top: 7px;
+    font-size:15px;
+}
+
+    #root > div > div > div > form > div > div > input:focus-visible {
+        outline:none!important;
+    }
+
+    #root > div > div.container > div > div.register-author-right-panel.col-sm-8 > form > div:nth-child(10) > div > div > div.css-g1d714-ValueContainer {
+        top: 10px !important;
+    }
+
+.css-1pahdxg-control:hover, .css-1pahdxg-control:active, .css-1pahdxg-control {
+    border-color: white !important;
+    box-shadow: #fff !important;
+    outline: none !important;
+}
+
+.cookieConsent {
+    background-color: #fff !important;
+    color: #000 !important;
+    padding: 5px 50px;
+    box-shadow: -1px -30px 28px -29px rgba(0,0,0,0.31);
+    -webkit-box-shadow: -1px -30px 28px -29px rgba(0,0,0,0.31);
+    -moz-box-shadow: -1px -30px 28px -29px rgba(0,0,0,0.31);
+}
+
+    
+
+     #btn-consent {
+        padding: 7px 30px !important;
+    }
+
+.landing-form-devider {
+    border-left: 1px solid #f1f1f1;
+    height: 47px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.MuiBox-root-3, .MuiBox-root-11 {
+    width: 100px!important;
+}

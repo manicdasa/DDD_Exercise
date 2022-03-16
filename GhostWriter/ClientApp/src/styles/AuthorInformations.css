@@ -1,0 +1,575 @@
+.column-style
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.row-style
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.center-style{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.picture-style
+{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.margin-top
+{
+    margin-top: -20px;
+}
+
+.button-edit
+{
+    margin-left: 50px;
+}
+
+.user-edit-profile {
+    justify-content:space-between!important;
+}
+
+.register-user-box.row.mr-5.sidebar {
+    padding: 0 10px 0 10px !important;
+}
+
+#root > div > div.container > div > div.register-user-box.row.mr-5 {
+    width: 30% !important;
+    padding: 0px !important;
+    height:auto;
+}
+
+    #root > div > div.container > div > div.register-user-box.row.mr-5.sidebar > div > div.tab-content {
+        /*padding: 5px 10px!important; */
+    }
+
+    #root > div > div.container > div > div.register-user-box.row.mr-5.sidebar > div > ul > li:nth-child(1), #root > div > div.container > div > div.register-user-box.row.mr-5.sidebar > div > ul > li:nth-child(1) > a {
+        border-top-left-radius: 0.25rem !important;
+    }
+
+    #root > div > div.container > div > div.register-user-box.row.mr-5.sidebar > div > ul > li:nth-child(3) {
+        border-top-right-radius: 0.25rem !important;
+        width:34%!important;
+    }
+
+    #root > div > div.container > div > div.register-user-box.row {
+        /*width: 70% !important; */
+        width:900px;
+        padding: 45px;
+        height:fit-content;
+    }
+
+#root > div > div.container > div > div:nth-child(2) > div {
+    width: -webkit-fill-available;
+}
+
+#root > div > div.container > div > div.register-user-box.row.mr-5 > div {
+    width:100%!important;
+}
+
+    #root > div > div.container > div > div.register-user-box.row.mr-5 > div > ul {
+        width: -webkit-fill-available!important;
+    }
+
+        #root > div > div.container > div > div.register-user-box.row.mr-5 > div > ul > li {
+            width:33%!important;
+            font-size:15px!important;
+        }
+
+#root > div > div.container > div > div:nth-child(2) > div > div:nth-child(1) > div > div.ml-5 > ul > li {
+    width:25%!important;
+    font-size:15px!important;
+}
+
+#root > div > div.container > div > div:nth-child(2) > div > div:nth-child(1) > div > div.ml-5 > div.tab-content.tabs-content-author-info > div.tab-pane.active, #root > div > div.container > div > div:nth-child(2) > div > div:nth-child(2) > div > div.tab-pane.active {
+    min-height: 5vh !important;
+    background-color: #fff !important;
+    margin-bottom: 25px !important;
+    padding: 25px 0px 20px 0px !important;
+}
+
+    #root > div > div.container > div > div:nth-child(2) > div > div:nth-child(1) > div > div.ml-5 > div.tab-content.tabs-content-author-info > div.tab-pane.active > div > div > ul {
+        padding:0px!important;
+    }
+
+ul.author-projects-tabs.nav.nav-tabs {
+    /* border-top: 1px solid #ccc!important;
+    padding-top:25px!important;
+       */
+}
+
+ul.author-projects-tabs.nav.nav-tabs > li {
+    width:33%!important;
+}
+
+.button-edit.btn.btn-secondary {
+    background-color: transparent !important;
+    border-color: #4E74DE !important;
+    color: #4E74DE !important;
+    font-size: 15px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
+    .button-edit.btn.btn-secondary:hover {
+        background-color: #4E74DE !important;
+        border-color: #4E74DE !important;
+        color: #fff !important;
+       
+    }
+
+#root > div > div.container > div > div:nth-child(2) > div > div:nth-child(1) > div > div.ml-5 > ul > li > a.active.nav-link, #root > div > div.container > div > div:nth-child(2) > div > div:nth-child(2) > ul > li > a.active.nav-link {
+    border-bottom: 2px solid #212529 !important;
+    font-weight: 600 !important;
+    color: #212529!important;
+}
+#root > div > div.container > div > div:nth-child(2) > div > div:nth-child(1) > div > div.ml-5 > ul > li > a.nav-link, #root > div > div.container > div > div:nth-child(2) > div > div:nth-child(2) > ul > li > a.nav-link {
+    background-color: #fff !important;
+    font-weight: 400 !important;
+}
+
+.form-filter-auth-profile {
+    padding: 0px 0px 10px 0px!important;
+    margin-bottom: 25px !important;
+    background-color: #fff;
+    border-radius: 0px;
+    border-bottom:1px solid #f1f1f1;
+}
+
+.page-num {
+    width:130px!important;
+    margin-left:15px;
+}
+
+.select-wrap.in {
+    border-left: 0px !important;
+    background-color: transparent !important;
+}
+.select-wrap, label-wrap.css-2b097c-container, #root > div > div.container > div > div:nth-child(2) > div > div:nth-child(2) > div > div.tab-pane.active > div > div > form > div > div.select-wrap.in > div.label-wrap, #root > div > div.container > div > div:nth-child(2) > div > div:nth-child(2) > div > div.tab-pane.active > div > div > form > div > div:nth-child(2) > div.label-wrap {
+    background-color: transparent !important;
+}
+
+    #root > div > div.container > div > div:nth-child(2) > div > div:nth-child(2) > div > div.tab-pane.active > div > div > form > div > div > div.label-wrap {
+        padding-top:20px!important;    }
+
+.kindofwork-lbl {
+    /*display:none!important; */
+}
+
+.row-style.form-filter {
+    justify-content: flex-start !important;
+    padding-bottom: 5px !important;
+    padding-top: 3px !important;
+    padding-left: 3px !important;
+    padding-right: 3px !important;
+    flex-direction:column!important;
+}
+
+#root > div > div.container > div > div:nth-child(2) > div > div:nth-child(2) > div > div.tab-pane.active > div > div > form > div > div > div.label-wrap.css-2b097c-container {
+    height:auto!important;
+}
+
+#root > div > div.container > div > div:nth-child(2) > div > div:nth-child(2) > div > div.tab-pane.active > div > div > form > div > div:nth-child(3) > input {
+    height: 37px !important;
+    margin-top: 20px !important;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding-left: 5px;
+}
+.div-input-column.select-wrap {
+    /*width:162px!important; */
+}
+
+.top-search-options, .bottom-search-options {
+    padding:0 30px 0 20px;
+}
+
+    .bottom-search-options {
+        margin-top:15px;
+    }
+
+    .MuiSlider-root {
+        margin-top: 26px !important;
+        margin-right: 10px !important;
+    }
+
+.searchauthor-column-filter {
+    margin-top: 17px !important;
+    margin-right: 8px !important;
+    flex:2;
+    text-align:right!important;
+}
+
+.label-warp-colo {
+    color: #999!important;
+    margin-top:7px;
+}
+
+
+.select-wrap.label-search-filter label {
+    font-size:14px!important;
+    font-weight:500!important;
+}
+.srch-btn {
+    margin-top: 20px;
+    margin-left: 15px
+}
+
+.srch-btn-btn:hover {
+    background-color: #3e5aa7 !important;
+}
+
+.edit-icon {
+    margin-top: -3px !important;
+}
+
+#root > div > div.container > div > div:nth-child(2) > div > div:nth-child(1) > div > div.ml-5 {
+    margin-left:2rem!important;
+}
+/*active projects nav list*/
+.column.list {
+    padding: 15px 35px 5px 35px !important;
+    background-color: #fff !important;
+    border-radius: 4px !important;
+    border-bottom: 2px solid aliceblue !important;
+    margin-bottom: 0px !important;
+}
+    .column.list:hover {
+        background-color: aliceblue !important;
+        border-radius: 4px !important;
+       
+        
+        margin-bottom:0px!important;
+        
+    }
+
+    .title-proj {
+        width:90%;
+    }
+
+.proj-details.row {
+    margin-top:-4px;
+}
+/*
+.proj-details.row {
+    background-color:#f1f1f1!important;
+    padding:5px 10px 0px 0px!important;
+}
+
+    .proj-details.row > div.row.ml-1.list > p {
+        margin-bottom: 0px !important;
+        padding: 4px 4px 0 0!important;
+        border-radius:4px;
+
+    }
+        */
+.price-proj, .open-proj {
+    flex: 2 !important;
+    text-align: right !important;
+}
+
+    .open-proj {
+        margin-top:-8px!important;
+    }
+
+    #root > div > div.container > div > div:nth-child(2) > div > div:nth-child(2) > div > div.tab-pane.active > div > div > div > div > div.proj-details.row > div.open-proj > a {
+        padding-right: 0px !important;
+    }
+
+.row.ml-1.list {
+    font-size:15px!important;
+}
+
+.commentBox.center {
+    margin-top:25px;
+
+}
+
+.msg-user-p {
+    color: #4E74DE !important;
+}
+
+#root > div > div.container > div > div:nth-child(2) > div > div > div > div.tab-pane.active > div > div > div > div > div.proj-details.row > div.row.ml-1.list > p > svg {
+    margin-top:-2px!important;
+}
+
+.broadcast-icon {
+    /*color: darkorange !important;
+    border: 1px solid darkorange;
+    border-radius: 50%;*/
+    padding: 1px;
+    margin-top: -3px;
+    color: rgb(144, 159, 202);
+}
+
+.active-proj-ico, .open-project-icon {
+    color: rgb(144, 159, 202);
+    padding: 1px;
+    margin-top: -4px;
+}
+
+.open-projects-tab-customer {
+    margin-left:-12px!important;
+}
+/*sidebar*/
+.offer-card, .bid-card {
+    border-bottom: 1px solid #f1f1f1 !important;
+    padding-bottom: 25px !important;
+    margin-bottom: 20px !important;
+    padding: 15px;
+}
+
+.sidebar-icons {
+    margin-top:5px!important;
+    
+}
+
+    .sidebar-icons1 {
+        margin-top:4px!important;
+    }
+
+    .row-style.sub {
+        font-size: 15px !important;
+    }
+
+.div-language, .div-offer {
+    font-weight: 500;
+    font-size:15px;
+}
+
+.lang-value {
+    font-weight:400!important;
+}
+
+.p-username {
+    color: #4E74DE !important;
+}
+
+.h-title > a {
+    padding-left:0px;
+    padding-top:0px;
+}
+
+.chat-svg-sidebar {
+    float:left;
+}
+
+.author-tooltip-nav-link-sidebar {
+    padding: 0px !important;
+    float: left !important;
+    margin-left: 6px;
+    margin-bottom: 10px;
+    /*color: #222 !important; */
+    color: #4E74DE !important;
+}
+
+.project-status.sidebar-chat {
+    float:left!important;
+    width:100%;
+}
+
+#root > div > div.container > div > div.register-user-box.row.mr-5 > div > ul > li {
+    background-color: #fff !important;
+}
+
+#root > div > div.container > div > div.register-user-box.row.mr-5.sidebar > div > ul > li > a.nav-link {
+    padding:15px!important;
+}
+
+#root > div > div.container > div > div.register-user-box.row.mr-5.sidebar > div > ul > li:nth-child(1) > a {
+    background-color: #e9ecef !important;
+    color: #4E74DE !important;
+    border-right: 1px solid #fff !important;
+}
+#root > div > div.container > div > div.register-user-box.row.mr-5.sidebar > div > ul > li:nth-child(2) > a {
+    background-color: #e9ecef !important;
+    color: #4E74DE !important;
+    border-right: 1px solid #fff !important;
+    border-left: 1px solid #fff !important;
+}
+
+#root > div > div.container > div > div.register-user-box.row.mr-5.sidebar > div > ul > li:nth-child(3) > a {
+    background-color: #e9ecef !important;
+    color: #4E74DE !important;
+    border-left: 1px solid #fff !important;
+}
+
+#root > div > div.container > div > div.register-user-box.row.mr-5.sidebar > div > ul > li:nth-child(1) > a.active.nav-link {
+    background-color: #fff !important;
+    border-right: 0px solid #f1f1f1 !important;
+    border-bottom: 0px solid #fff !important;
+}
+
+#root > div > div.container > div > div.register-user-box.row.mr-5.sidebar > div > ul > li:nth-child(2) > a.active.nav-link {
+    background-color: #fff !important;
+    border-right: 0px solid #f1f1f1 !important;
+    border-left: 0px solid #f1f1f1 !important;
+    border-bottom: 2px solid #fff !important;
+    
+}
+
+#root > div > div.container > div > div.register-user-box.row.mr-5.sidebar > div > ul > li:nth-child(3) > a.active.nav-link {
+    background-color: #fff !important;
+    border-left: 0px solid #f1f1f1 !important;
+    border-bottom: 0px solid #fff !important;
+    border-top-left-radius: 0px !important;
+}
+
+#root > div > div.container > div > div.register-user-box.row.mr-5 > div > ul > li > a.active.nav-link {
+    border-bottom: 2px solid #212529;
+    font-weight: 600 !important;
+    color: #212529 !important;
+}
+
+.nav.nav-tabs > .nav-item > .nav-link {
+    border-bottom: 2px solid #f1f1f1 !important;
+}
+    /*paggination*/
+    .commentBox.center {
+        float: right !important;
+        text-align: right !important;
+    }
+
+    /*sidebar customer*/
+
+#root > div > div.container > div > div.register-user-box.row.mr-5 > div > ul.customer-nav-tabs.nav.nav-tabs > li {
+    width: 33% !important;
+    
+}
+    #root > div > div.container > div > div.register-user-box.row.mr-5 > div > ul.customer-nav-tabs.nav.nav-tabs > li:nth-child(1), #root > div > div.container > div > div.register-user-box.row.mr-5 > div > ul.customer-nav-tabs.nav.nav-tabs > li:nth-child(1) > a {
+        border-top-left-radius: 0.25rem !important;
+    }
+    #root > div > div.container > div > div.register-user-box.row.mr-5 > div > ul.customer-nav-tabs.nav.nav-tabs > li:nth-child(2), #root > div > div.container > div > div.register-user-box.row.mr-5 > div > ul.customer-nav-tabs.nav.nav-tabs > li:nth-child(2) > a {
+        
+    }
+
+        #root > div > div.container > div > div.register-user-box.row.mr-5 > div > ul.customer-nav-tabs.nav.nav-tabs > li:nth-child(3) {
+            border-top-right-radius: 0.25rem !important;
+            width:34%!important;
+        }
+
+
+    #root > div > div.container > div > div.register-user-box.row.mr-5 > div > ul.customer-nav-tabs.nav.nav-tabs > li > a {
+        background-color: #e9ecef !important;
+    }
+
+    #root > div > div.container > div > div.register-user-box.row.mr-5 > div > ul.customer-nav-tabs.nav.nav-tabs > li:nth-child(1) > a {
+       
+    }
+
+    #root > div > div.container > div > div.register-user-box.row.mr-5 > div > ul.customer-nav-tabs.nav.nav-tabs > li:nth-child(2) > a {
+        border-right: 2px solid #fff!important;
+        border-left: 2px solid #fff!important;
+    }
+
+
+
+    #root > div > div.container > div > div.register-user-box.row.mr-5 > div > ul.customer-nav-tabs.nav.nav-tabs > li > a.active.nav-link {
+        border-bottom: 2px solid #fff !important;
+        font-weight: 600 !important;
+        color: #212529 !important;
+        background-color:#fff!important;
+    }
+
+.button-change-password {
+    margin-left: 10px;
+}
+
+.button-edit.button-change-picture.btn.btn-secondary, .button-edit.button-change-profile-picture.btn.btn-secondary {
+    border-radius: 50% !important;
+    position: absolute;
+    margin-left: 75px;
+    background-color: #4E74DE !important;
+    color: white !important;
+    border: 3px solid #fff !important;
+}
+
+    .button-edit.button-change-picture.btn.btn-secondary:hover, .button-edit.button-change-profile-picture.btn.btn-secondary:hover {
+        background-color: #3955a2 !important;
+    }
+    
+    #root > div.layout-box > div.container > div.row-style.mt-3 > div.register-user-box.row > div.column > div > div.row-style > div.column-style.center-style > button.button-edit.button-change-picture.btn.btn-secondary {
+        padding-right: 10px !important;
+        padding-left: 10px !important;
+    }
+
+#root > div.layout-box > div.container > div.row-style.mt-3 > div.register-user-box.row > div.column > div > div.row-style > div.ml-5 > div.collapse.show > div.card > div.card-body > ul.tabs-author-info.nav.nav-tabs > li.nav-item {
+    width: 25% !important;
+    font-size: 15px;
+}
+
+#root > div.layout-box > div.container > div.row-style.mt-3 > div.register-user-box.row > div.column > div > div.row-style > div.ml-5 > div.collapsing > div.card > div.card-body > ul.tabs-author-info.nav.nav-tabs > li.nav-item {
+    width: 25% !important;
+    font-size: 15px;   
+}
+
+.card-body {
+    padding: 0px;
+}
+
+.tabs-content-author-info.margin-info {
+    margin-top: 20px;
+}
+
+.tabs-content-author-info {
+    font-size:15px;
+}
+
+.author-info-btn {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.edit-icon-auth-info {   
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.card {
+    border: 0px;
+}
+
+.nav.nav-tabs > .nav-item > .active.nav-link {
+    border-bottom: 2px solid #212529 !important;
+    font-weight: 600 !important;
+    color: #212529 !important;
+}
+
+div.tab-pane.active {
+    padding: 25px 0px 20px 0px !important;
+}
+
+.author-info-btn.profile-subtitle {
+    color: #4E74DE;
+    margin-bottom:25px;
+    font-weight:400!important;
+}
+
+div.collapse.show > div.card > div.card-body > ul.tabs-author-info.nav.nav-tabs > li > a {
+    background-color:white!important;
+}
+
+.svg-icon-auth-info {
+    margin-bottom:4px;
+}
+
+/*change pass modal*/
+
+.chng-pass {
+    width:300px;
+}
+
+.chng-pass-container {
+    padding:40px 30px 10px 30px;
+}

@@ -1,0 +1,150 @@
+﻿
+body, html {
+   
+}
+
+.landing-layout-box {
+    /*background-image: url(/static/media/header_image.88ecbc77.png);*/
+    background-image: url(images/landing_back.jpg);
+    height: 220vh;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
+    background-color: #22454b;
+    background-blend-mode: multiply;
+}
+
+.landing_title {
+    margin-bottom:50px!important;
+    color:#fff;
+    font-weight:400!important;
+    font-size:32px!important;
+}
+
+.title_bold {
+    font-weight:700!important;
+}
+
+.center-padding-landing {
+    text-align: center;
+    margin-top: 15vh;
+}
+
+.submit-column-landing {
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+    padding: 12px 25px 12px 25px;
+    background-color: #fff;
+    border-radius: 45px;
+    box-shadow: -5px 28px 5px -15px rgba(0,0,0,0.39);
+    -webkit-box-shadow: -5px 28px 5px -15px rgba(0,0,0,0.39);
+    -moz-box-shadow: -5px 28px 5px -15px rgba(0,0,0,0.39);
+}
+.select-wrap {
+    border:none!important;
+    width:25%!important; 
+}
+
+    .select-wrap label {
+        font-size: 12px!important;
+        text-transform: uppercase;
+        color: #777;
+        padding: 0 2px!important;
+        position: absolute;
+        top: 0px!important;
+        font-weight:700!important;
+        color:#333!important;
+        text-transform:capitalize!important;
+        margin-bottom:5px!important;
+    }
+
+
+.lbl_padd {
+    margin-left: 3px !important;
+    margin-top: 4px;
+    z-index: 1;
+}
+
+.select-wrap.in {
+    border-left:1px solid #ccc!important;
+    border-radius:0!important;
+}
+
+#root > div > div > div > form > div > div > select, #root > div > div > div > form > div > div > input {
+    color: #6a6a6a !important;
+    font-weight: 400 !important;
+}
+
+#root > div > div > div > form > div > div > select > option {
+    color: #000 !important;
+    font-weight: 500 !important;
+}
+
+.searchauthor-column {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 292px;
+    text-align: right;
+}
+
+#root > div > div > div > form > div > div.searchauthor-column > button {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    margin-top:1px;
+}
+
+    #root > div > div > div > form > div > div.searchauthor-column > button > svg {
+        margin-top:-2px!important;
+    }
+
+.text-light.mr-2.mt-3 {
+    font-size:20px!important;
+    margin-top:45px!important;
+}
+svg.cursor {
+    font-size: 21px;
+    margin-bottom: 7px;
+    color: #4E74DE !important;
+}
+
+svg.cursor:hover {
+    
+    opacity:0.7;
+}
+
+.column.mr-4 {
+    /*display:none!important; */
+}
+
+.column.mr-4.icn {
+    width:20%!important;
+}
+
+.txt-how {
+    color:#fff!important;
+}
+
+.style-how-does.row.center {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+div.css-yk16xz-control:hover, div.css-yk16xz-control, div.css-1pahdxg-control, div.css-1pahdxg-control:hover {
+    
+    
+}
+
+/*LANDING*/
+
+.searchauthor-column.landing {
+    width:auto!important;
+}
+
+.select-wrap.landing {
+    min-width:160px!important;
+}
+

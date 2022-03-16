@@ -1,0 +1,7743 @@
+{
+  "x-generator": "NSwag v13.9.4.0 (NJsonSchema v10.3.1.0 (Newtonsoft.Json v12.0.0.0))",
+  "openapi": "3.0.0",
+  "info": {
+    "title": "GhostWriter API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/Admin/PayAuthor": {
+      "post": {
+        "tags": [
+          "Admin"
+        ],
+        "operationId": "Admin_PayAuthor",
+        "parameters": [
+          {
+            "name": "bookingId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "paymentAmount",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OutputModel"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin"
+            ]
+          }
+        ]
+      }
+    },
+    "/Admin/MarkAsPaidAuthor": {
+      "post": {
+        "tags": [
+          "Admin"
+        ],
+        "operationId": "Admin_MarkAsPaidAuthor",
+        "parameters": [
+          {
+            "name": "bookingId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "paymentAmount",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OutputModel"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin"
+            ]
+          }
+        ]
+      }
+    },
+    "/Admin/GetProjectsDatatable": {
+      "get": {
+        "tags": [
+          "Admin"
+        ],
+        "operationId": "Admin_GetProjectsDatatable",
+        "parameters": [
+          {
+            "name": "Search",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "OrderColumn.OrderByColumn",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          },
+          {
+            "name": "OrderColumn.OrderByAsc",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            },
+            "x-position": 3
+          },
+          {
+            "name": "Page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 4
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 5
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedListOfBookingShortInfoDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin"
+            ]
+          }
+        ]
+      }
+    },
+    "/Admin/GetDashboardStats": {
+      "get": {
+        "tags": [
+          "Admin"
+        ],
+        "operationId": "Admin_GetDashboardStats",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DashboardStatsDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin"
+            ]
+          }
+        ]
+      }
+    },
+    "/Admin/GetAuthorStats": {
+      "get": {
+        "tags": [
+          "Admin"
+        ],
+        "operationId": "Admin_GetAuthorStats",
+        "parameters": [
+          {
+            "name": "Search",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "OrderColumn.OrderByColumn",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          },
+          {
+            "name": "OrderColumn.OrderByAsc",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            },
+            "x-position": 3
+          },
+          {
+            "name": "Page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 4
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 5
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedListOfAuthorStatsDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin"
+            ]
+          }
+        ]
+      }
+    },
+    "/Admin/GetCustomerStats": {
+      "get": {
+        "tags": [
+          "Admin"
+        ],
+        "operationId": "Admin_GetCustomerStats",
+        "parameters": [
+          {
+            "name": "Search",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "OrderColumn.OrderByColumn",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          },
+          {
+            "name": "OrderColumn.OrderByAsc",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            },
+            "x-position": 3
+          },
+          {
+            "name": "Page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 4
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 5
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedListOfCustomerStatsDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin"
+            ]
+          }
+        ]
+      }
+    },
+    "/Admin/GetClosedUnpaidProjects": {
+      "get": {
+        "tags": [
+          "Admin"
+        ],
+        "operationId": "Admin_GetClosedUnpaidProjects",
+        "parameters": [
+          {
+            "name": "Search",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "OrderColumn.OrderByColumn",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          },
+          {
+            "name": "OrderColumn.OrderByAsc",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            },
+            "x-position": 3
+          },
+          {
+            "name": "Page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 4
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 5
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedListOfBookingPaymentAdminDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin"
+            ]
+          }
+        ]
+      }
+    },
+    "/Admin/GetNewProjects": {
+      "get": {
+        "tags": [
+          "Admin"
+        ],
+        "operationId": "Admin_GetNewProjects",
+        "parameters": [
+          {
+            "name": "Search",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "OrderColumn.OrderByColumn",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          },
+          {
+            "name": "OrderColumn.OrderByAsc",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            },
+            "x-position": 3
+          },
+          {
+            "name": "Page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 4
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 5
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedListOfBookingAdminDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin"
+            ]
+          }
+        ]
+      }
+    },
+    "/Admin/GetActiveProjects": {
+      "get": {
+        "tags": [
+          "Admin"
+        ],
+        "operationId": "Admin_GetActiveProjects",
+        "parameters": [
+          {
+            "name": "Search",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "OrderColumn.OrderByColumn",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          },
+          {
+            "name": "OrderColumn.OrderByAsc",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            },
+            "x-position": 3
+          },
+          {
+            "name": "Page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 4
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 5
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedListOfBookingAdminDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin"
+            ]
+          }
+        ]
+      }
+    },
+    "/Admin/GetProjectsInDispute": {
+      "get": {
+        "tags": [
+          "Admin"
+        ],
+        "operationId": "Admin_GetProjectsInDispute",
+        "parameters": [
+          {
+            "name": "Search",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "OrderColumn.OrderByColumn",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          },
+          {
+            "name": "OrderColumn.OrderByAsc",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            },
+            "x-position": 3
+          },
+          {
+            "name": "Page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 4
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 5
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedListOfBookingAdminDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin"
+            ]
+          }
+        ]
+      }
+    },
+    "/Admin/GetArchivedProjects": {
+      "get": {
+        "tags": [
+          "Admin"
+        ],
+        "operationId": "Admin_GetArchivedProjects",
+        "parameters": [
+          {
+            "name": "Search",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "OrderColumn.OrderByColumn",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          },
+          {
+            "name": "OrderColumn.OrderByAsc",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            },
+            "x-position": 3
+          },
+          {
+            "name": "Page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 4
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 5
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedListOfBookingAdminDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin"
+            ]
+          }
+        ]
+      }
+    },
+    "/Admin/GetNewUsers": {
+      "get": {
+        "tags": [
+          "Admin"
+        ],
+        "operationId": "Admin_GetNewUsers",
+        "parameters": [
+          {
+            "name": "Search",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "OrderColumn.OrderByColumn",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          },
+          {
+            "name": "OrderColumn.OrderByAsc",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            },
+            "x-position": 3
+          },
+          {
+            "name": "Page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 4
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 5
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedListOfCustomerDetailedStatsDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin"
+            ]
+          }
+        ]
+      }
+    },
+    "/Admin/GetActiveUsers": {
+      "get": {
+        "tags": [
+          "Admin"
+        ],
+        "operationId": "Admin_GetActiveUsers",
+        "parameters": [
+          {
+            "name": "Search",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "OrderColumn.OrderByColumn",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          },
+          {
+            "name": "OrderColumn.OrderByAsc",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            },
+            "x-position": 3
+          },
+          {
+            "name": "Page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 4
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 5
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedListOfCustomerDetailedStatsDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin"
+            ]
+          }
+        ]
+      }
+    },
+    "/Admin/GetInactiveUsers": {
+      "get": {
+        "tags": [
+          "Admin"
+        ],
+        "operationId": "Admin_GetInactiveUsers",
+        "parameters": [
+          {
+            "name": "Search",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "OrderColumn.OrderByColumn",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          },
+          {
+            "name": "OrderColumn.OrderByAsc",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            },
+            "x-position": 3
+          },
+          {
+            "name": "Page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 4
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 5
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedListOfCustomerDetailedStatsDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin"
+            ]
+          }
+        ]
+      }
+    },
+    "/Admin/GetNewAuthors": {
+      "get": {
+        "tags": [
+          "Admin"
+        ],
+        "operationId": "Admin_GetNewAuthors",
+        "parameters": [
+          {
+            "name": "Search",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "OrderColumn.OrderByColumn",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          },
+          {
+            "name": "OrderColumn.OrderByAsc",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            },
+            "x-position": 3
+          },
+          {
+            "name": "Page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 4
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 5
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedListOfAuthorDetailedStatsDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin"
+            ]
+          }
+        ]
+      }
+    },
+    "/Admin/GetActiveAuthors": {
+      "get": {
+        "tags": [
+          "Admin"
+        ],
+        "operationId": "Admin_GetActiveAuthors",
+        "parameters": [
+          {
+            "name": "Search",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "OrderColumn.OrderByColumn",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          },
+          {
+            "name": "OrderColumn.OrderByAsc",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            },
+            "x-position": 3
+          },
+          {
+            "name": "Page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 4
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 5
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedListOfAuthorDetailedStatsDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin"
+            ]
+          }
+        ]
+      }
+    },
+    "/Admin/GetInactiveAuthors": {
+      "get": {
+        "tags": [
+          "Admin"
+        ],
+        "operationId": "Admin_GetInactiveAuthors",
+        "parameters": [
+          {
+            "name": "Search",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "OrderColumn.OrderByColumn",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          },
+          {
+            "name": "OrderColumn.OrderByAsc",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            },
+            "x-position": 3
+          },
+          {
+            "name": "Page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 4
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 5
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedListOfAuthorDetailedStatsDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin"
+            ]
+          }
+        ]
+      }
+    },
+    "/Authenticate/login": {
+      "post": {
+        "tags": [
+          "Authenticate"
+        ],
+        "operationId": "Authenticate_Login",
+        "requestBody": {
+          "x-name": "model",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginModel"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LogInResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Authenticate/registerUser": {
+      "post": {
+        "tags": [
+          "Authenticate"
+        ],
+        "operationId": "Authenticate_RegisterUser",
+        "requestBody": {
+          "x-name": "model",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterModel"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Authenticate/registerAuthor": {
+      "post": {
+        "tags": [
+          "Authenticate"
+        ],
+        "operationId": "Authenticate_RegisterAuthor",
+        "requestBody": {
+          "x-name": "model",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterAuthorModel"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Authenticate/GetAuthorsPaypalCredentials": {
+      "post": {
+        "tags": [
+          "Authenticate"
+        ],
+        "operationId": "Authenticate_GetAuthorsPaypalCredentials",
+        "parameters": [
+          {
+            "name": "code",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Authenticate/CheckEmailAvailability": {
+      "post": {
+        "tags": [
+          "Authenticate"
+        ],
+        "operationId": "Authenticate_CheckEmailAvailability",
+        "parameters": [
+          {
+            "name": "email",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LogInResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Authenticate/CheckUsernameAvailability": {
+      "post": {
+        "tags": [
+          "Authenticate"
+        ],
+        "operationId": "Authenticate_CheckUsernameAvailability",
+        "requestBody": {
+          "x-name": "model",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UsernameAvailabilityInputModel"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LogInResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Authenticate/requestPasswordChange": {
+      "post": {
+        "tags": [
+          "Authenticate"
+        ],
+        "operationId": "Authenticate_RequestPasswordChange",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Authenticate/resendEmailConfirmation": {
+      "post": {
+        "tags": [
+          "Authenticate"
+        ],
+        "operationId": "Authenticate_ResendEmailConfirmation",
+        "requestBody": {
+          "x-name": "model",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResendEmailConfirmModel"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Authenticate/resetPassword": {
+      "post": {
+        "tags": [
+          "Authenticate"
+        ],
+        "operationId": "Authenticate_ResetPassword",
+        "requestBody": {
+          "x-name": "model",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PasswordResetModel"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Authenticate/changePassword": {
+      "post": {
+        "tags": [
+          "Authenticate"
+        ],
+        "operationId": "Authenticate_ChangePassword",
+        "requestBody": {
+          "x-name": "model",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PasswordChangeModel"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/Authenticate/confirmEmail": {
+      "get": {
+        "tags": [
+          "Authenticate"
+        ],
+        "operationId": "Authenticate_ConfirmEmail",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "token",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OutputModel"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Booking/AcceptBid": {
+      "put": {
+        "tags": [
+          "Booking"
+        ],
+        "operationId": "Booking_AcceptBid",
+        "parameters": [
+          {
+            "name": "proposalId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OutputModel"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin",
+              "Customer",
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/Booking/AcceptOffer": {
+      "put": {
+        "tags": [
+          "Booking"
+        ],
+        "operationId": "Booking_AcceptOffer",
+        "parameters": [
+          {
+            "name": "proposalId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OutputModel"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin",
+              "Customer",
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/Booking/UploadProjectDocument": {
+      "put": {
+        "tags": [
+          "Booking"
+        ],
+        "operationId": "Booking_UploadProjectDocument",
+        "parameters": [
+          {
+            "name": "bookingId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "formFile": {
+                    "type": "string",
+                    "format": "binary",
+                    "nullable": true
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OutputModel"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin",
+              "Customer",
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/Booking/SubmitFinalVersion": {
+      "put": {
+        "tags": [
+          "Booking"
+        ],
+        "operationId": "Booking_SubmitFinalVersion",
+        "parameters": [
+          {
+            "name": "bookingId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "formFile": {
+                    "type": "string",
+                    "format": "binary",
+                    "nullable": true
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OutputModel"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin",
+              "Customer",
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/Booking/AddProjectReview": {
+      "post": {
+        "tags": [
+          "Booking"
+        ],
+        "operationId": "Booking_AddProjectReview",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddReviewCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OutputModel"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin",
+              "Customer",
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/Booking/ConfirmProject": {
+      "put": {
+        "tags": [
+          "Booking"
+        ],
+        "operationId": "Booking_ConfirmProject",
+        "parameters": [
+          {
+            "name": "bookingId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OutputModel"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin",
+              "Customer",
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/Booking/CreateDispute": {
+      "post": {
+        "tags": [
+          "Booking"
+        ],
+        "operationId": "Booking_CreateDispute",
+        "parameters": [
+          {
+            "name": "bookingId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "message",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OutputModel"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin",
+              "Customer",
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/Booking/AcceptDispute": {
+      "put": {
+        "tags": [
+          "Booking"
+        ],
+        "operationId": "Booking_AcceptDispute",
+        "parameters": [
+          {
+            "name": "bookingId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "refundAmount",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "x-position": 2
+          },
+          {
+            "name": "paymentAmountAuthor",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "x-position": 3
+          },
+          {
+            "name": "message",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 4
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OutputModel"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin",
+              "Customer",
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/Booking/DeclineDispute": {
+      "put": {
+        "tags": [
+          "Booking"
+        ],
+        "operationId": "Booking_DeclineDispute",
+        "parameters": [
+          {
+            "name": "bookingId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "message",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OutputModel"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin",
+              "Customer",
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/Booking/CancelProject": {
+      "put": {
+        "tags": [
+          "Booking"
+        ],
+        "operationId": "Booking_CancelProject",
+        "parameters": [
+          {
+            "name": "bookingId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OutputModel"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin",
+              "Customer",
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/Booking/GetAuthorsClosedProjects": {
+      "get": {
+        "tags": [
+          "Booking"
+        ],
+        "operationId": "Booking_GetAuthorsClosedProjects",
+        "parameters": [
+          {
+            "name": "KindOfWorkIds",
+            "in": "query",
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "array",
+              "nullable": true,
+              "items": {
+                "type": "integer",
+                "format": "int32"
+              }
+            },
+            "x-position": 1
+          },
+          {
+            "name": "AreaOfExpertiseIds",
+            "in": "query",
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "array",
+              "nullable": true,
+              "items": {
+                "type": "integer",
+                "format": "int32"
+              }
+            },
+            "x-position": 2
+          },
+          {
+            "name": "LanguageIds",
+            "in": "query",
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "array",
+              "nullable": true,
+              "items": {
+                "type": "integer",
+                "format": "int32"
+              }
+            },
+            "x-position": 3
+          },
+          {
+            "name": "MinimumDegreeId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            },
+            "x-position": 4
+          },
+          {
+            "name": "NoPagesFromRange",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            },
+            "x-position": 5
+          },
+          {
+            "name": "NoPagesToRange",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            },
+            "x-position": 6
+          },
+          {
+            "name": "Page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 7
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 8
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedListOfBookingShortInfoDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin",
+              "Customer",
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/Booking/GetAuthorsActiveProjects": {
+      "get": {
+        "tags": [
+          "Booking"
+        ],
+        "operationId": "Booking_GetAuthorsActiveProjects",
+        "parameters": [
+          {
+            "name": "KindOfWorkIds",
+            "in": "query",
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "array",
+              "nullable": true,
+              "items": {
+                "type": "integer",
+                "format": "int32"
+              }
+            },
+            "x-position": 1
+          },
+          {
+            "name": "AreaOfExpertiseIds",
+            "in": "query",
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "array",
+              "nullable": true,
+              "items": {
+                "type": "integer",
+                "format": "int32"
+              }
+            },
+            "x-position": 2
+          },
+          {
+            "name": "LanguageIds",
+            "in": "query",
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "array",
+              "nullable": true,
+              "items": {
+                "type": "integer",
+                "format": "int32"
+              }
+            },
+            "x-position": 3
+          },
+          {
+            "name": "MinimumDegreeId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            },
+            "x-position": 4
+          },
+          {
+            "name": "NoPagesFromRange",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            },
+            "x-position": 5
+          },
+          {
+            "name": "NoPagesToRange",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            },
+            "x-position": 6
+          },
+          {
+            "name": "Page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 7
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 8
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedListOfBookingShortInfoDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin",
+              "Customer",
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/Booking/GetCustomersClosedProjects": {
+      "get": {
+        "tags": [
+          "Booking"
+        ],
+        "operationId": "Booking_GetCustomersClosedProjects",
+        "parameters": [
+          {
+            "name": "Deadline",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "KindOfWorkIds",
+            "in": "query",
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "array",
+              "nullable": true,
+              "items": {
+                "type": "integer",
+                "format": "int32"
+              }
+            },
+            "x-position": 2
+          },
+          {
+            "name": "AreaOfExpertiseIds",
+            "in": "query",
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "array",
+              "nullable": true,
+              "items": {
+                "type": "integer",
+                "format": "int32"
+              }
+            },
+            "x-position": 3
+          },
+          {
+            "name": "LanguageIds",
+            "in": "query",
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "array",
+              "nullable": true,
+              "items": {
+                "type": "integer",
+                "format": "int32"
+              }
+            },
+            "x-position": 4
+          },
+          {
+            "name": "MinimumDegreeId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            },
+            "x-position": 5
+          },
+          {
+            "name": "NoPagesFromRange",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            },
+            "x-position": 6
+          },
+          {
+            "name": "NoPagesToRange",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            },
+            "x-position": 7
+          },
+          {
+            "name": "Page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 8
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 9
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedListOfBookingShortInfoDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin",
+              "Customer",
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/Booking/GetCustomersActiveProjects": {
+      "get": {
+        "tags": [
+          "Booking"
+        ],
+        "operationId": "Booking_GetCustomersActiveProjects",
+        "parameters": [
+          {
+            "name": "Deadline",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "KindOfWorkIds",
+            "in": "query",
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "array",
+              "nullable": true,
+              "items": {
+                "type": "integer",
+                "format": "int32"
+              }
+            },
+            "x-position": 2
+          },
+          {
+            "name": "AreaOfExpertiseIds",
+            "in": "query",
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "array",
+              "nullable": true,
+              "items": {
+                "type": "integer",
+                "format": "int32"
+              }
+            },
+            "x-position": 3
+          },
+          {
+            "name": "LanguageIds",
+            "in": "query",
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "array",
+              "nullable": true,
+              "items": {
+                "type": "integer",
+                "format": "int32"
+              }
+            },
+            "x-position": 4
+          },
+          {
+            "name": "MinimumDegreeId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            },
+            "x-position": 5
+          },
+          {
+            "name": "NoPagesFromRange",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            },
+            "x-position": 6
+          },
+          {
+            "name": "NoPagesToRange",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            },
+            "x-position": 7
+          },
+          {
+            "name": "Page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 8
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 9
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedListOfBookingShortInfoDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin",
+              "Customer",
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/Booking/GetBookingChatInfoCustomer": {
+      "get": {
+        "tags": [
+          "Booking"
+        ],
+        "operationId": "Booking_GetBookingChatInfoCustomer",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedListOfBookingChatInfoDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin",
+              "Customer",
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/Booking/GetBookingChatInfoAuthor": {
+      "get": {
+        "tags": [
+          "Booking"
+        ],
+        "operationId": "Booking_GetBookingChatInfoAuthor",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedListOfBookingChatInfoDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin",
+              "Customer",
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/Booking/GetBookingDetails": {
+      "get": {
+        "tags": [
+          "Booking"
+        ],
+        "operationId": "Booking_GetBookingDetails",
+        "parameters": [
+          {
+            "name": "bookingId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BookingDetailsDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin",
+              "Customer",
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/Booking/DownloadProjectDocument": {
+      "get": {
+        "tags": [
+          "Booking"
+        ],
+        "operationId": "Booking_DownloadProjectDocument",
+        "parameters": [
+          {
+            "name": "documentId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin",
+              "Customer",
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/Chat/SendMessage": {
+      "post": {
+        "tags": [
+          "Chat"
+        ],
+        "operationId": "Chat_SendMessage",
+        "parameters": [
+          {
+            "name": "headProposalId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "exactEntityId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 2
+          },
+          {
+            "name": "message",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 3
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OutputModel"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin",
+              "Customer",
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/Chat/GetAllMessagesByBooking": {
+      "get": {
+        "tags": [
+          "Chat"
+        ],
+        "operationId": "Chat_GetAllMessagesByBooking",
+        "parameters": [
+          {
+            "name": "bookingId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MessageDTO"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin",
+              "Customer",
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/Chat/GetAllMessagesByHeadProposal": {
+      "get": {
+        "tags": [
+          "Chat"
+        ],
+        "operationId": "Chat_GetAllMessagesByHeadProposal",
+        "parameters": [
+          {
+            "name": "headProposalId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MessageDTO"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin",
+              "Customer",
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/CopyleaksHooks/Completed": {
+      "post": {
+        "tags": [
+          "CopyleaksHooks"
+        ],
+        "operationId": "CopyleaksHooks_Completed",
+        "parameters": [
+          {
+            "name": "scanId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "x-name": "model",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CompletedCallback"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Lookup/AddCustomExpertiseArea": {
+      "post": {
+        "tags": [
+          "Lookup"
+        ],
+        "operationId": "Lookup_AddCustomExpertiseArea",
+        "parameters": [
+          {
+            "name": "value",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OutputModel"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Lookup/AddCustomKindOfWork": {
+      "post": {
+        "tags": [
+          "Lookup"
+        ],
+        "operationId": "Lookup_AddCustomKindOfWork",
+        "parameters": [
+          {
+            "name": "value",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OutputModel"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Lookup/ProcessCustomKindOfWork": {
+      "put": {
+        "tags": [
+          "Lookup"
+        ],
+        "operationId": "Lookup_ProcessCustomKindOfWork",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "approved",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            },
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OutputModel"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin"
+            ]
+          }
+        ]
+      }
+    },
+    "/Lookup/ProcessCustomExpertiseArea": {
+      "put": {
+        "tags": [
+          "Lookup"
+        ],
+        "operationId": "Lookup_ProcessCustomExpertiseArea",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "approved",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            },
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OutputModel"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin"
+            ]
+          }
+        ]
+      }
+    },
+    "/Lookup/GetCustomPendingExpertiseAreas": {
+      "get": {
+        "tags": [
+          "Lookup"
+        ],
+        "operationId": "Lookup_GetCustomPendingExpertiseAreas",
+        "parameters": [
+          {
+            "name": "Search",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "OrderColumn.OrderByColumn",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          },
+          {
+            "name": "OrderColumn.OrderByAsc",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            },
+            "x-position": 3
+          },
+          {
+            "name": "Page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 4
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 5
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedListOfExpertiseAreaDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin"
+            ]
+          }
+        ]
+      }
+    },
+    "/Lookup/GetCustomPendingKindsOfWork": {
+      "get": {
+        "tags": [
+          "Lookup"
+        ],
+        "operationId": "Lookup_GetCustomPendingKindsOfWork",
+        "parameters": [
+          {
+            "name": "Search",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "OrderColumn.OrderByColumn",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          },
+          {
+            "name": "OrderColumn.OrderByAsc",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            },
+            "x-position": 3
+          },
+          {
+            "name": "Page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 4
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 5
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedListOfKindOfWorkDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin"
+            ]
+          }
+        ]
+      }
+    },
+    "/Lookup/KindOfWork": {
+      "get": {
+        "tags": [
+          "Lookup"
+        ],
+        "operationId": "Lookup_KindOfWork",
+        "parameters": [
+          {
+            "name": "Search",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "OrderColumn.OrderByColumn",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          },
+          {
+            "name": "OrderColumn.OrderByAsc",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            },
+            "x-position": 3
+          },
+          {
+            "name": "Page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 4
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 5
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Lookup/AreaOfExpertise": {
+      "get": {
+        "tags": [
+          "Lookup"
+        ],
+        "operationId": "Lookup_AreaOfExpertise",
+        "parameters": [
+          {
+            "name": "Search",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "OrderColumn.OrderByColumn",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          },
+          {
+            "name": "OrderColumn.OrderByAsc",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            },
+            "x-position": 3
+          },
+          {
+            "name": "Page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 4
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 5
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Lookup/Language": {
+      "get": {
+        "tags": [
+          "Lookup"
+        ],
+        "operationId": "Lookup_Language",
+        "parameters": [
+          {
+            "name": "Search",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "OrderColumn.OrderByColumn",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          },
+          {
+            "name": "OrderColumn.OrderByAsc",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            },
+            "x-position": 3
+          },
+          {
+            "name": "Page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 4
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 5
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Lookup/Degree": {
+      "get": {
+        "tags": [
+          "Lookup"
+        ],
+        "operationId": "Lookup_Degree",
+        "parameters": [
+          {
+            "name": "Search",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "OrderColumn.OrderByColumn",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          },
+          {
+            "name": "OrderColumn.OrderByAsc",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            },
+            "x-position": 3
+          },
+          {
+            "name": "Page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 4
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 5
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Notification/MarkNotificationsAsSeen": {
+      "get": {
+        "tags": [
+          "Notification"
+        ],
+        "operationId": "Notification_MarkNotificationsAsSeen",
+        "parameters": [
+          {
+            "name": "notificationType",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/NotificationType"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OutputModel"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin",
+              "Customer",
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/Notification/GetUserNotifications": {
+      "get": {
+        "tags": [
+          "Notification"
+        ],
+        "operationId": "Notification_GetUserNotifications",
+        "parameters": [
+          {
+            "name": "Search",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "OrderColumn.OrderByColumn",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          },
+          {
+            "name": "OrderColumn.OrderByAsc",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            },
+            "x-position": 3
+          },
+          {
+            "name": "Page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 4
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 5
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedListOfNotificationDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin",
+              "Customer",
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/Payment/GetPaypalCredentials": {
+      "get": {
+        "tags": [
+          "Payment"
+        ],
+        "operationId": "Payment_GetPaypalCredentials",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaypalInfoDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Payment/GeneratePaymentToken": {
+      "get": {
+        "tags": [
+          "Payment"
+        ],
+        "operationId": "Payment_GeneratePaymentToken",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Payment/MakeRefund": {
+      "post": {
+        "tags": [
+          "Payment"
+        ],
+        "operationId": "Payment_MakeRefund",
+        "parameters": [
+          {
+            "name": "bookingId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "refundAmount",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Payment/MakePayment": {
+      "post": {
+        "tags": [
+          "Payment"
+        ],
+        "operationId": "Payment_MakePayment",
+        "parameters": [
+          {
+            "name": "headProposalId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "paymentMethodNonce",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Project/CreateProject": {
+      "post": {
+        "tags": [
+          "Project"
+        ],
+        "operationId": "Project_CreateProject",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateProjectCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExtendedOutputModelTempOfNotificationSignalRDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin",
+              "Customer",
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/Project/CreateProjectAndOfferToAuthor": {
+      "post": {
+        "tags": [
+          "Project"
+        ],
+        "operationId": "Project_CreateProjectAndOfferToAuthor",
+        "parameters": [
+          {
+            "name": "authorId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 2
+          }
+        ],
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateProjectCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OutputModel"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin",
+              "Customer",
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/Project/EditProjectDetails": {
+      "put": {
+        "tags": [
+          "Project"
+        ],
+        "operationId": "Project_EditProjectDetails",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EditProjectDetailsCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OutputModel"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin",
+              "Customer",
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/Project/ChangeBroadcastInfo": {
+      "put": {
+        "tags": [
+          "Project"
+        ],
+        "operationId": "Project_ChangeBroadcastInfo",
+        "parameters": [
+          {
+            "name": "projectId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "isPublished",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            },
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OutputModel"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin",
+              "Customer",
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/Project/DeleteProject": {
+      "put": {
+        "tags": [
+          "Project"
+        ],
+        "operationId": "Project_DeleteProject",
+        "parameters": [
+          {
+            "name": "projectId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OutputModel"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin",
+              "Customer",
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/Project/GetProjectDetails": {
+      "get": {
+        "tags": [
+          "Project"
+        ],
+        "operationId": "Project_GetProjectDetails",
+        "parameters": [
+          {
+            "name": "projectId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProjectDetailsDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin",
+              "Customer",
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/Project/GetAuthorsLiveBroadcast": {
+      "get": {
+        "tags": [
+          "Project"
+        ],
+        "operationId": "Project_GetAuthorsLiveBroadcast",
+        "parameters": [
+          {
+            "name": "KindOfWorkIds",
+            "in": "query",
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "array",
+              "nullable": true,
+              "items": {
+                "type": "integer",
+                "format": "int32"
+              }
+            },
+            "x-position": 1
+          },
+          {
+            "name": "AreaOfExpertiseIds",
+            "in": "query",
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "array",
+              "nullable": true,
+              "items": {
+                "type": "integer",
+                "format": "int32"
+              }
+            },
+            "x-position": 2
+          },
+          {
+            "name": "LanguageIds",
+            "in": "query",
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "array",
+              "nullable": true,
+              "items": {
+                "type": "integer",
+                "format": "int32"
+              }
+            },
+            "x-position": 3
+          },
+          {
+            "name": "MinimumDegreeId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            },
+            "x-position": 4
+          },
+          {
+            "name": "NoPagesFromRange",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            },
+            "x-position": 5
+          },
+          {
+            "name": "NoPagesToRange",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            },
+            "x-position": 6
+          },
+          {
+            "name": "Deadline",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            },
+            "x-position": 7
+          },
+          {
+            "name": "Page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 8
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 9
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedListOfProjectDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin",
+              "Customer",
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/Project/GetCustomersOpenProjects": {
+      "get": {
+        "tags": [
+          "Project"
+        ],
+        "operationId": "Project_GetCustomersOpenProjects",
+        "parameters": [
+          {
+            "name": "KindOfWorkIds",
+            "in": "query",
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "array",
+              "nullable": true,
+              "items": {
+                "type": "integer",
+                "format": "int32"
+              }
+            },
+            "x-position": 1
+          },
+          {
+            "name": "AreaOfExpertiseIds",
+            "in": "query",
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "array",
+              "nullable": true,
+              "items": {
+                "type": "integer",
+                "format": "int32"
+              }
+            },
+            "x-position": 2
+          },
+          {
+            "name": "LanguageIds",
+            "in": "query",
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "array",
+              "nullable": true,
+              "items": {
+                "type": "integer",
+                "format": "int32"
+              }
+            },
+            "x-position": 3
+          },
+          {
+            "name": "MinimumDegreeId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            },
+            "x-position": 4
+          },
+          {
+            "name": "NoPagesFromRange",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            },
+            "x-position": 5
+          },
+          {
+            "name": "NoPagesToRange",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            },
+            "x-position": 6
+          },
+          {
+            "name": "Deadline",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "x-position": 7
+          },
+          {
+            "name": "Page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 8
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 9
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedListOfProjectBidsDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin",
+              "Customer",
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/Proposal/CreateBid": {
+      "post": {
+        "tags": [
+          "Proposal"
+        ],
+        "operationId": "Proposal_CreateBid",
+        "parameters": [
+          {
+            "name": "projectId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "financialOffer",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OutputModel"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin",
+              "Customer",
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/Proposal/CreateOffer": {
+      "post": {
+        "tags": [
+          "Proposal"
+        ],
+        "operationId": "Proposal_CreateOffer",
+        "parameters": [
+          {
+            "name": "projectId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "authorId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OutputModel"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin",
+              "Customer",
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/Proposal/DropProposalAuthor": {
+      "put": {
+        "tags": [
+          "Proposal"
+        ],
+        "operationId": "Proposal_DropProposalAuthor",
+        "parameters": [
+          {
+            "name": "proposalId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OutputModel"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin",
+              "Customer",
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/Proposal/DropProposalCustomer": {
+      "put": {
+        "tags": [
+          "Proposal"
+        ],
+        "operationId": "Proposal_DropProposalCustomer",
+        "parameters": [
+          {
+            "name": "proposalId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OutputModel"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin",
+              "Customer",
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/Proposal/GetAuthorsActiveOffers": {
+      "get": {
+        "tags": [
+          "Proposal"
+        ],
+        "operationId": "Proposal_GetAuthorsActiveOffers",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedListOfProposalDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin",
+              "Customer",
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/Proposal/GetCustomersNewOffers": {
+      "get": {
+        "tags": [
+          "Proposal"
+        ],
+        "operationId": "Proposal_GetCustomersNewOffers",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedListOfProposalDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin",
+              "Customer",
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/Proposal/GetCustomersGeneratedOffers": {
+      "get": {
+        "tags": [
+          "Proposal"
+        ],
+        "operationId": "Proposal_GetCustomersGeneratedOffers",
+        "parameters": [
+          {
+            "name": "Page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedListOfProposalDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin",
+              "Customer",
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/Proposal/GetAuthorsBids": {
+      "get": {
+        "tags": [
+          "Proposal"
+        ],
+        "operationId": "Proposal_GetAuthorsBids",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedListOfProposalDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin",
+              "Customer",
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/Proposal/GetCustomersProjectBids": {
+      "get": {
+        "tags": [
+          "Proposal"
+        ],
+        "operationId": "Proposal_GetCustomersProjectBids",
+        "parameters": [
+          {
+            "name": "projectId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedListOfProposalDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin",
+              "Customer",
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/Proposal/GetAuthorsLastBid": {
+      "get": {
+        "tags": [
+          "Proposal"
+        ],
+        "operationId": "Proposal_GetAuthorsLastBid",
+        "parameters": [
+          {
+            "name": "projectId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProposalInfoDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin",
+              "Customer",
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/Proposal/GetAuthorsLastOffer": {
+      "get": {
+        "tags": [
+          "Proposal"
+        ],
+        "operationId": "Proposal_GetAuthorsLastOffer",
+        "parameters": [
+          {
+            "name": "projectId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProposalInfoDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin",
+              "Customer",
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/Proposal/GetCustomersLastOffer": {
+      "get": {
+        "tags": [
+          "Proposal"
+        ],
+        "operationId": "Proposal_GetCustomersLastOffer",
+        "parameters": [
+          {
+            "name": "projectId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProposalInfoDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin",
+              "Customer",
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/Proposal/GetProposalDetails": {
+      "get": {
+        "tags": [
+          "Proposal"
+        ],
+        "operationId": "Proposal_GetProposalDetails",
+        "parameters": [
+          {
+            "name": "proposalId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProposalDetailsDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Admin",
+              "Customer",
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/User/EditAuthorPrivateInfo": {
+      "put": {
+        "tags": [
+          "User"
+        ],
+        "operationId": "User_EditAuthorPrivateInfo",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EditAuthorPrivateInfoCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OutputModel"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/User/ChangeAuthorsProfilePicture": {
+      "put": {
+        "tags": [
+          "User"
+        ],
+        "operationId": "User_ChangeAuthorsProfilePicture",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangeAuthorsProfilePictureCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OutputModel"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/User/AnonymizeCustomer": {
+      "put": {
+        "tags": [
+          "User"
+        ],
+        "operationId": "User_AnonymizeCustomer",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OutputModel"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/User/AnonymizeAuthor": {
+      "put": {
+        "tags": [
+          "User"
+        ],
+        "operationId": "User_AnonymizeAuthor",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OutputModel"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/User/AnonymizeCustomerCheck": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "operationId": "User_AnonymizeCustomerCheck",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OutputModel"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Customer"
+            ]
+          }
+        ]
+      }
+    },
+    "/User/AnonymizeAuthorCheck": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "operationId": "User_AnonymizeAuthorCheck",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OutputModel"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Ghostwriter"
+            ]
+          }
+        ]
+      }
+    },
+    "/User/AuthorsSearch": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "operationId": "User_AuthorsSearch",
+        "parameters": [
+          {
+            "name": "ProjectId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "KindOfWordId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 2
+          },
+          {
+            "name": "MinimumDegreeId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 3
+          },
+          {
+            "name": "AreaOfExpertiseIds",
+            "in": "query",
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "array",
+              "nullable": true,
+              "items": {
+                "type": "integer",
+                "format": "int32"
+              }
+            },
+            "x-position": 4
+          },
+          {
+            "name": "LanguageId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 5
+          },
+          {
+            "name": "NumberOfPages",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 6
+          },
+          {
+            "name": "Deadline",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "x-position": 7
+          },
+          {
+            "name": "PlannedBudget",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "x-position": 8
+          },
+          {
+            "name": "Page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 9
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 10
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedListOfAuthorDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Customer"
+            ]
+          }
+        ]
+      }
+    },
+    "/User/GetAuthorPrivateInfo": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "operationId": "User_GetAuthorPrivateInfo",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthorPrivateInfoDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/User/GetAuthorPublicInfo": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "operationId": "User_GetAuthorPublicInfo",
+        "parameters": [
+          {
+            "name": "authorId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthorPublicInfoDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/User/GetCustomerPrivateInfo": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "operationId": "User_GetCustomerPrivateInfo",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomerPrivateInfoDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/User/GetCustomerPublicInfo": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "operationId": "User_GetCustomerPublicInfo",
+        "parameters": [
+          {
+            "name": "customerId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomerPublicInfoDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "OutputModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "PagedListOfBookingShortInfoDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "totalCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "items": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/BookingShortInfoDTO"
+            }
+          }
+        }
+      },
+      "BookingShortInfoDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "bookingId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "headProposalId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "bookingStatus": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/BookingStatusDTO"
+              }
+            ]
+          },
+          "deadline": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "dateCreated": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "totalPrice": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "totalServiceCharges": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "projectTopic": {
+            "type": "string",
+            "nullable": true
+          },
+          "pagesNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "customerUsername": {
+            "type": "string",
+            "nullable": true
+          },
+          "authorUsername": {
+            "type": "string",
+            "nullable": true
+          },
+          "authorId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "languageDTO": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/LanguageDTO"
+              }
+            ]
+          },
+          "kindOfWorkDTO": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/KindOfWorkDTO"
+              }
+            ]
+          }
+        }
+      },
+      "BookingStatusDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "value": {
+            "type": "string",
+            "nullable": true
+          },
+          "closed": {
+            "$ref": "#/components/schemas/BookingStatus"
+          }
+        }
+      },
+      "BookingStatus": {
+        "type": "integer",
+        "description": "",
+        "x-enumNames": [
+          "Inactive",
+          "Active",
+          "FinalVersionSubmitted",
+          "Closed",
+          "InDispute",
+          "ClosedAfterDispute",
+          "PlagiarismCheckDone",
+          "Cancelled"
+        ],
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "LanguageDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "value": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "KindOfWorkDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "value": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "fieldStatusDTO": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/FieldStatusDTO"
+              }
+            ]
+          }
+        }
+      },
+      "FieldStatusDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "value": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "DashboardStatsDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "activeProjects": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "disputeProjects": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "newProjects": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "newUsers": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "PagedListOfAuthorStatsDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "totalCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "items": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/AuthorStatsDTO"
+            }
+          }
+        }
+      },
+      "AuthorStatsDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "username": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "dateRegistered": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "noActiveProjects": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "noClosedProjects": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "PagedListOfCustomerStatsDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "totalCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "items": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/CustomerStatsDTO"
+            }
+          }
+        }
+      },
+      "CustomerStatsDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "username": {
+            "type": "string",
+            "nullable": true
+          },
+          "dateRegistered": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "noActiveProjects": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "noClosedProjects": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "PagedListOfBookingPaymentAdminDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "totalCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "items": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/BookingPaymentAdminDTO"
+            }
+          }
+        }
+      },
+      "BookingPaymentAdminDTO": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BookingAdminDTO"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "totalAmountToPay": {
+                "type": "number",
+                "format": "decimal"
+              },
+              "customerRefund": {
+                "type": "number",
+                "format": "decimal"
+              },
+              "amountPaid": {
+                "type": "number",
+                "format": "decimal"
+              },
+              "iban": {
+                "type": "string",
+                "nullable": true
+              },
+              "isCompletelyPaid": {
+                "type": "boolean"
+              }
+            }
+          }
+        ]
+      },
+      "BookingAdminDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "bookingStatus": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/BookingStatusDTO"
+              }
+            ]
+          },
+          "dueDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "dateCreated": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "projectTopic": {
+            "type": "string",
+            "nullable": true
+          },
+          "customerUsername": {
+            "type": "string",
+            "nullable": true
+          },
+          "authorUsername": {
+            "type": "string",
+            "nullable": true
+          },
+          "authorId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "PagedListOfBookingAdminDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "totalCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "items": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/BookingAdminDTO"
+            }
+          }
+        }
+      },
+      "PagedListOfCustomerDetailedStatsDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "totalCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "items": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/CustomerDetailedStatsDTO"
+            }
+          }
+        }
+      },
+      "CustomerDetailedStatsDTO": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/CustomerStatsDTO"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "noProjectsCreated": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "lastProjectTitle": {
+                "type": "string",
+                "nullable": true
+              },
+              "lastProjectId": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "noUnassignedProjects": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          }
+        ]
+      },
+      "PagedListOfAuthorDetailedStatsDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "totalCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "items": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/AuthorDetailedStatsDTO"
+            }
+          }
+        }
+      },
+      "AuthorDetailedStatsDTO": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/AuthorStatsDTO"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "noTotalProjects": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "lastProjectTitle": {
+                "type": "string",
+                "nullable": true
+              },
+              "lastProjectId": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          }
+        ]
+      },
+      "LogInResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "user": {
+            "type": "string",
+            "nullable": true
+          },
+          "token": {
+            "type": "string",
+            "nullable": true
+          },
+          "userRoles": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "string"
+            }
+          },
+          "expiration": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        }
+      },
+      "LoginModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "username": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "BasicResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "RegisterModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "username",
+          "email",
+          "password"
+        ],
+        "properties": {
+          "username": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 5
+          },
+          "email": {
+            "type": "string",
+            "format": "email",
+            "minLength": 1
+          },
+          "password": {
+            "type": "string",
+            "maxLength": 100,
+            "minLength": 6
+          }
+        }
+      },
+      "RegisterAuthorModel": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/RegisterModel"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "firstName",
+              "lastName",
+              "profileIntroduction",
+              "pricePerPage",
+              "directBooking",
+              "pagesPerDay",
+              "dateOfBirth",
+              "highestDegreeId",
+              "languageIds",
+              "kindOfWorks",
+              "expertiseAreas"
+            ],
+            "properties": {
+              "firstName": {
+                "type": "string",
+                "maxLength": 64,
+                "minLength": 1
+              },
+              "lastName": {
+                "type": "string",
+                "maxLength": 64,
+                "minLength": 1
+              },
+              "iban": {
+                "type": "string",
+                "nullable": true
+              },
+              "paypalCode": {
+                "type": "string",
+                "nullable": true
+              },
+              "profileIntroduction": {
+                "type": "string",
+                "minLength": 1
+              },
+              "pricePerPage": {
+                "type": "number",
+                "format": "decimal",
+                "maximum": 2147483647.0,
+                "minimum": 1.0
+              },
+              "directBooking": {
+                "type": "boolean"
+              },
+              "pagesPerDay": {
+                "type": "integer",
+                "format": "int32",
+                "maximum": 2147483647.0,
+                "minimum": 1.0
+              },
+              "profilePicture": {
+                "type": "string",
+                "nullable": true
+              },
+              "dateOfBirth": {
+                "type": "string",
+                "format": "date-time",
+                "minLength": 1
+              },
+              "highestDegreeId": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "languageIds": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "kindOfWorks": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/LookupSingleResultModel"
+                }
+              },
+              "expertiseAreas": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/LookupSingleResultModel"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "LookupSingleResultModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "value": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "UsernameAvailabilityInputModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "username"
+        ],
+        "properties": {
+          "username": {
+            "type": "string",
+            "minLength": 1
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "birthday": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        }
+      },
+      "ResendEmailConfirmModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "username"
+        ],
+        "properties": {
+          "username": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "PasswordResetModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "username",
+          "password"
+        ],
+        "properties": {
+          "username": {
+            "type": "string",
+            "minLength": 1
+          },
+          "password": {
+            "type": "string",
+            "maxLength": 100,
+            "minLength": 6
+          },
+          "token": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "PasswordChangeModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "oldPassword",
+          "newPassword"
+        ],
+        "properties": {
+          "oldPassword": {
+            "type": "string",
+            "minLength": 1
+          },
+          "newPassword": {
+            "type": "string",
+            "maxLength": 100,
+            "minLength": 6
+          }
+        }
+      },
+      "AddReviewCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "starRating": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "bookingId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "PagedListOfBookingChatInfoDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "totalCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "items": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/BookingChatInfoDTO"
+            }
+          }
+        }
+      },
+      "BookingChatInfoDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "bookingId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "headProposalId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "authorUsername": {
+            "type": "string",
+            "nullable": true
+          },
+          "authorId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "customerUsername": {
+            "type": "string",
+            "nullable": true
+          },
+          "bookingStatus": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/BookingStatusDTO"
+              }
+            ]
+          },
+          "projectTopic": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastMessageContent": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "BookingDetailsDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "bookingId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "headProposalId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "deadline": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "totalPrice": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "taxPercentage": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "feePerPage": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "paymentVerified": {
+            "type": "boolean"
+          },
+          "projectTopic": {
+            "type": "string",
+            "nullable": true
+          },
+          "projectDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "pagesNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "bookingStatus": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/BookingStatusDTO"
+              }
+            ]
+          },
+          "customerDTO": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/CustomerPublicInfoDTO"
+              }
+            ]
+          },
+          "authorUsername": {
+            "type": "string",
+            "nullable": true
+          },
+          "authorId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "disputeMessage": {
+            "type": "string",
+            "nullable": true
+          },
+          "ratingDTO": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/RatingDTO"
+              }
+            ]
+          },
+          "languageDTO": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/LanguageDTO"
+              }
+            ]
+          },
+          "kindOfWorkDTO": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/KindOfWorkDTO"
+              }
+            ]
+          },
+          "expertiseAreaDTOs": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/ExpertiseAreaDTO"
+            }
+          },
+          "documentDTOs": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/DocumentDTO"
+            }
+          }
+        }
+      },
+      "CustomerPublicInfoDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalSpent": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "jobsPostedCnt": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "username": {
+            "type": "string",
+            "nullable": true
+          },
+          "paymentVerified": {
+            "type": "boolean"
+          }
+        }
+      },
+      "RatingDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "starRating": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "comment": {
+            "type": "string",
+            "nullable": true
+          },
+          "rateWriter": {
+            "$ref": "#/components/schemas/RateWriter"
+          }
+        }
+      },
+      "RateWriter": {
+        "type": "integer",
+        "description": "",
+        "x-enumNames": [
+          "WrittenByCustomer",
+          "WrittenByGhostWriter"
+        ],
+        "enum": [
+          0,
+          1
+        ]
+      },
+      "ExpertiseAreaDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "value": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "fieldStatusDTO": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/FieldStatusDTO"
+              }
+            ]
+          }
+        }
+      },
+      "DocumentDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "publicName": {
+            "type": "string",
+            "nullable": true
+          },
+          "isFinalVersion": {
+            "type": "boolean"
+          },
+          "dateCreated": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "MessageDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "conversationId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "headProposalId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "bookingId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "username": {
+            "type": "string",
+            "nullable": true
+          },
+          "myMessage": {
+            "type": "boolean"
+          },
+          "isLogMessage": {
+            "type": "boolean"
+          },
+          "messageText": {
+            "type": "string",
+            "nullable": true
+          },
+          "dateTimeSent": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "CompletedCallback": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Result"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "downloadableReport": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/ReportResponse"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "ReportResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "report": {
+            "type": "string",
+            "format": "uri",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/EReportStatus"
+          }
+        }
+      },
+      "EReportStatus": {
+        "type": "integer",
+        "description": "",
+        "x-enumNames": [
+          "Success",
+          "InternalError"
+        ],
+        "enum": [
+          0,
+          1
+        ]
+      },
+      "Result": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseResponse"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "scannedDocument": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/ScannedDocumentSection"
+                  }
+                ]
+              },
+              "results": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/ResultsSection"
+                  }
+                ]
+              },
+              "notifications": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/NotificationSection"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "ScannedDocumentSection": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "scanId": {
+            "type": "string",
+            "nullable": true
+          },
+          "totalWords": {
+            "type": "integer"
+          },
+          "totalExcluded": {
+            "type": "integer"
+          },
+          "credits": {
+            "type": "integer"
+          },
+          "creationTime": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "ResultsSection": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "internet": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/InternetResult"
+            }
+          },
+          "database": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/DatabaseResult"
+            }
+          },
+          "batch": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/BatchResult"
+            }
+          },
+          "repositories": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/RepositoryResult"
+            }
+          },
+          "score": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/ScoreSection"
+              }
+            ]
+          }
+        }
+      },
+      "InternetResult": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BasicResult"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "url": {
+                "type": "string",
+                "nullable": true
+              }
+            }
+          }
+        ]
+      },
+      "BasicResult": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "introduction": {
+            "type": "string",
+            "nullable": true
+          },
+          "matchedWords": {
+            "type": "integer"
+          }
+        }
+      },
+      "DatabaseResult": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BasicInternalResult"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "BasicInternalResult": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BasicResult"
+          },
+          {
+            "type": "object",
+            "x-abstract": true,
+            "additionalProperties": false,
+            "properties": {
+              "scanId": {
+                "type": "string",
+                "nullable": true
+              }
+            }
+          }
+        ]
+      },
+      "BatchResult": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BasicInternalResult"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "RepositoryResult": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BasicInternalResult"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "repositoryId": {
+                "type": "string",
+                "nullable": true
+              }
+            }
+          }
+        ]
+      },
+      "ScoreSection": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "identicalWords": {
+            "type": "integer"
+          },
+          "minorChangedWords": {
+            "type": "integer"
+          },
+          "relatedMeaningWords": {
+            "type": "integer"
+          },
+          "aggregatedScore": {
+            "type": "number",
+            "format": "double"
+          }
+        }
+      },
+      "NotificationSection": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "alerts": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/AlertNotification"
+            }
+          }
+        }
+      },
+      "AlertNotification": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "additionalData": {
+            "type": "string",
+            "nullable": true
+          },
+          "code": {
+            "type": "string",
+            "nullable": true
+          },
+          "helpLink": {
+            "type": "string",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "severity": {
+            "$ref": "#/components/schemas/EAlertSeverity"
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "EAlertSeverity": {
+        "type": "integer",
+        "description": "",
+        "x-enumNames": [
+          "Debug",
+          "Info",
+          "Warning",
+          "Error",
+          "Critical"
+        ],
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "BaseResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "status": {
+            "$ref": "#/components/schemas/EScanStatus"
+          },
+          "error": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/ErrorSection"
+              }
+            ]
+          },
+          "developerPayload": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "EScanStatus": {
+        "type": "integer",
+        "description": "",
+        "x-enumNames": [
+          "CompletedSuccessfully",
+          "Error",
+          "CreditsChecked",
+          "Indexed",
+          "InProgress"
+        ],
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "ErrorSection": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "code": {
+            "$ref": "#/components/schemas/SByte"
+          }
+        }
+      },
+      "SByte": {
+        "type": "object",
+        "additionalProperties": false
+      },
+      "PagedListOfExpertiseAreaDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "totalCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "items": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/ExpertiseAreaDTO"
+            }
+          }
+        }
+      },
+      "PagedListOfKindOfWorkDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "totalCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "items": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/KindOfWorkDTO"
+            }
+          }
+        }
+      },
+      "NotificationType": {
+        "type": "integer",
+        "description": "",
+        "x-enumNames": [
+          "ActiveProject",
+          "NewOffer",
+          "Bid",
+          "LiveBroadcast",
+          "Admin"
+        ],
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "PagedListOfNotificationDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "totalCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "items": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/NotificationDTO"
+            }
+          }
+        }
+      },
+      "NotificationDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "detailsLink": {
+            "type": "string",
+            "nullable": true
+          },
+          "headProposalId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "projectId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "exactEntityId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "projectTopic": {
+            "type": "string",
+            "nullable": true
+          },
+          "authorUsername": {
+            "type": "string",
+            "nullable": true
+          },
+          "customerUsername": {
+            "type": "string",
+            "nullable": true
+          },
+          "dateTimeCreated": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "isSeen": {
+            "type": "boolean"
+          },
+          "notificationType": {
+            "$ref": "#/components/schemas/NotificationType"
+          }
+        }
+      },
+      "PaypalInfoDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "sandbox": {
+            "type": "boolean"
+          },
+          "paypalClientID": {
+            "type": "string",
+            "nullable": true
+          },
+          "merchantId": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "ExtendedOutputModelTempOfNotificationSignalRDTO": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/OutputModel"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "additionalInformation": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "additionalInformationNotification": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/NotificationSignalRDTO"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "NotificationSignalRDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "receiverUserId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "notificationDTO": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/NotificationDTO"
+              }
+            ]
+          },
+          "panelObjectDTO": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/PanelObjectDTO"
+              }
+            ]
+          }
+        }
+      },
+      "PanelObjectDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "eventType": {
+            "$ref": "#/components/schemas/EventType"
+          },
+          "panelTab": {
+            "$ref": "#/components/schemas/PanelTab"
+          },
+          "panelObject": {
+            "nullable": true
+          }
+        }
+      },
+      "EventType": {
+        "type": "integer",
+        "description": "",
+        "x-enumNames": [
+          "Create",
+          "Delete",
+          "Change"
+        ],
+        "enum": [
+          0,
+          1,
+          2
+        ]
+      },
+      "PanelTab": {
+        "type": "integer",
+        "description": "",
+        "x-enumNames": [
+          "Offer",
+          "Bid",
+          "Chat"
+        ],
+        "enum": [
+          0,
+          1,
+          2
+        ]
+      },
+      "CreateProjectCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "deadline": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "pricePerPage": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "projectTopic": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "pagesNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "minimumDegreeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "languageId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "kindOfWorkId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "expertiseAreaIds": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        }
+      },
+      "EditProjectDetailsCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "deadline": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "maxBudget": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "projectTopic": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "pagesNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "minimumDegreeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "languageId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "kindOfWorkId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "expertiseAreaIds": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        }
+      },
+      "ProjectDetailsDTO": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ProjectDTO"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "proposalDetailsDTOs": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/ProposalInfoDTO"
+                }
+              },
+              "customerPublicInfoDTO": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/CustomerPublicInfoDTO"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "ProposalInfoDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "headProposalId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "financialOffer": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "taxPercentage": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "feePerPage": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "proposalType": {
+            "type": "string",
+            "nullable": true
+          },
+          "proposalStatus": {
+            "type": "string",
+            "nullable": true
+          },
+          "dateCreated": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "customerUsername": {
+            "type": "string",
+            "nullable": true
+          },
+          "authorUsername": {
+            "type": "string",
+            "nullable": true
+          },
+          "authorId": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "ProjectDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "isPublished": {
+            "type": "boolean"
+          },
+          "deadline": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "dateCreated": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "maxBudget": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "calculatedServiceCharges": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "projectTopic": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "pagesNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "projectStatus": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "customerId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "customerUsername": {
+            "type": "string",
+            "nullable": true
+          },
+          "minimumDegreeDTO": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/DegreeDTO"
+              }
+            ]
+          },
+          "languageDTO": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/LanguageDTO"
+              }
+            ]
+          },
+          "kindOfWorkDTO": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/KindOfWorkDTO"
+              }
+            ]
+          },
+          "expertiseAreaListDTOs": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/ExpertiseAreaDTO"
+            }
+          }
+        }
+      },
+      "DegreeDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "value": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "PagedListOfProjectDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "totalCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "items": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/ProjectDTO"
+            }
+          }
+        }
+      },
+      "PagedListOfProjectBidsDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "totalCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "items": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/ProjectBidsDTO"
+            }
+          }
+        }
+      },
+      "ProjectBidsDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "projectId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "projectTopic": {
+            "type": "string",
+            "nullable": true
+          },
+          "pagesNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "maxBudget": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "calculatedServiceCharges": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "customerUsername": {
+            "type": "string",
+            "nullable": true
+          },
+          "languageDTO": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/LanguageDTO"
+              }
+            ]
+          },
+          "kindOfWorkDTO": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/KindOfWorkDTO"
+              }
+            ]
+          },
+          "expertiseAreaListDTOs": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/ExpertiseAreaDTO"
+            }
+          },
+          "bidsNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "highestBid": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/ProposalDetails1DTO"
+              }
+            ]
+          }
+        }
+      },
+      "ProposalDetails1DTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "headProposalId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "financialOffer": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "serviceCharges": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "pagesNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "projectTopic": {
+            "type": "string",
+            "nullable": true
+          },
+          "projectId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "authorUsername": {
+            "type": "string",
+            "nullable": true
+          },
+          "authorId": {
+            "type": "string",
+            "nullable": true
+          },
+          "proposalType": {
+            "type": "string",
+            "nullable": true
+          },
+          "proposalStatus": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "PagedListOfProposalDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "totalCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "items": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/ProposalDTO"
+            }
+          }
+        }
+      },
+      "ProposalDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "headProposalId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dateCreated": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "financialOffer": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "serviceCharges": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "deadline": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "projectId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "projectTopic": {
+            "type": "string",
+            "nullable": true
+          },
+          "pagesNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "customerUsername": {
+            "type": "string",
+            "nullable": true
+          },
+          "authorUsername": {
+            "type": "string",
+            "nullable": true
+          },
+          "authorId": {
+            "type": "string",
+            "nullable": true
+          },
+          "proposalStatus": {
+            "type": "string",
+            "nullable": true
+          },
+          "languageDTO": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/LanguageDTO"
+              }
+            ]
+          },
+          "kindOfWorkDTO": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/KindOfWorkDTO"
+              }
+            ]
+          },
+          "expertiseAreaListDTOs": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/ExpertiseAreaDTO"
+            }
+          }
+        }
+      },
+      "ProposalDetailsDTO": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ProposalDTO"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "taxPercentage": {
+                "type": "number",
+                "format": "decimal"
+              },
+              "feePerPage": {
+                "type": "number",
+                "format": "decimal"
+              },
+              "proposalType": {
+                "type": "string",
+                "nullable": true
+              },
+              "proposalStatus": {
+                "type": "string",
+                "nullable": true
+              }
+            }
+          }
+        ]
+      },
+      "EditAuthorPrivateInfoCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "birthDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "directBooking": {
+            "type": "boolean"
+          },
+          "profileIntroduction": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "highestDegree": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "expertiseAreas": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/LookupSingleResultModel"
+            }
+          },
+          "kindOfWorks": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/LookupSingleResultModel"
+            }
+          },
+          "languageIds": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        }
+      },
+      "ChangeAuthorsProfilePictureCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "picture": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "PagedListOfAuthorDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "totalCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "items": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/AuthorDTO"
+            }
+          }
+        }
+      },
+      "AuthorDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "username": {
+            "type": "string",
+            "nullable": true
+          },
+          "directBooking": {
+            "type": "boolean"
+          },
+          "pricePerPage": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "reviewRating": {
+            "type": "number",
+            "format": "decimal"
+          },
+          "reviewCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "picturePath": {
+            "type": "string",
+            "nullable": true
+          },
+          "picture": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/PictureDTO"
+              }
+            ]
+          },
+          "highestDegree": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/DegreeDTO"
+              }
+            ]
+          },
+          "expertiseAreas": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/ExpertiseAreaDTO"
+            }
+          },
+          "kindOfWorks": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/KindOfWorkDTO"
+            }
+          },
+          "languages": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/LanguageDTO"
+            }
+          }
+        }
+      },
+      "PictureDTO": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "mimeType": {
+            "type": "string",
+            "nullable": true
+          },
+          "seoFilename": {
+            "type": "string",
+            "nullable": true
+          },
+          "localPath": {
+            "type": "string",
+            "nullable": true
+          },
+          "pictureFileName": {
+            "type": "string",
+            "nullable": true
+          },
+          "dateCreated": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "AuthorPrivateInfoDTO": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/AuthorPublicInfoDTO"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "email": {
+                "type": "string",
+                "nullable": true
+              },
+              "firstName": {
+                "type": "string",
+                "nullable": true
+              },
+              "lastName": {
+                "type": "string",
+                "nullable": true
+              },
+              "birthDate": {
+                "type": "string",
+                "format": "date-time",
+                "nullable": true
+              }
+            }
+          }
+        ]
+      },
+      "AuthorPublicInfoDTO": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/AuthorDTO"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "avgPricePerPage": {
+                "type": "number",
+                "format": "decimal",
+                "nullable": true
+              },
+              "pagesPerDay": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "profileIntroduction": {
+                "type": "string",
+                "nullable": true
+              },
+              "description": {
+                "type": "string",
+                "nullable": true
+              },
+              "ratings": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/RatingDTO"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "CustomerPrivateInfoDTO": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/CustomerPublicInfoDTO"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "email": {
+                "type": "string",
+                "nullable": true
+              },
+              "pagesNoInProgress": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "pagesWrittenSoFar": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "noActiveBids": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "securitySchemes": {
+      "JWT": {
+        "type": "apiKey",
+        "description": "Type into the textbox: Bearer {your JWT token}.",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "security": [
+    {
+      "JWT": []
+    }
+  ]
+}
