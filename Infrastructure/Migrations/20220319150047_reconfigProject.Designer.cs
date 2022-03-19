@@ -3,15 +3,17 @@ using System;
 using GhostWriter.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace GhostWriter.Infrastructure.Migrations
 {
     [DbContext(typeof(Entities))]
-    partial class EntitiesModelSnapshot : ModelSnapshot
+    [Migration("20220319150047_reconfigProject")]
+    partial class reconfigProject
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -50,8 +50,8 @@ namespace GhostWriter.Domain.Entities
                 var chargesAmount = _priceCalculatorService.CalculateServiceCharges(totalPrice, pagesNo);
 
 
-                var entity = new Project(customer.Id, kindOfWork.Id, ProjectStatus.Open, pagesNo, description, projectTopic,
-                    chargesAmount, totalPrice, totalPrice, DateTime.UtcNow, DateTime.UtcNow, deadline, isPublished, 0);
+                var entity = new Project(customer, kindOfWork, ProjectStatus.Open, pagesNo, description, projectTopic,
+                    chargesAmount, totalPrice, totalPrice, DateTime.UtcNow, DateTime.UtcNow, deadline, isPublished);
               
 
                 return entity;
@@ -167,7 +167,7 @@ namespace GhostWriter.Domain.Entities
         public virtual ICollection<ServiceCharge> ServiceCharges => _serviceCharges;
         private readonly List<ServiceCharge> _serviceCharges;
 
-        private Project(int customerId, int kindOfWorkId, ProjectStatus projectStatus,
+        protected Project(int customerId, int kindOfWorkId, ProjectStatus projectStatus,
           int pagesNo, string description, string projectTopic,
           decimal calculatedServiceCharges, decimal maxBudget,
           decimal plannedBudget, DateTime lastUpdate, DateTime dateCreated,
@@ -188,18 +188,18 @@ namespace GhostWriter.Domain.Entities
             IsPublished = isPublished;
             Id = id;
         }
-        //private Project(ApplicationUser customer, KindOfWork kindOfWork, ProjectStatus projectStatus,
-        //    int pagesNo, string description, string projectTopic,
-        //    decimal calculatedServiceCharges, decimal maxBudget,
-        //    decimal plannedBudget, DateTime lastUpdate, DateTime dateCreated,
-        //    DateTime deadline, bool isPublished)
-        //    :this( customer.Id,  kindOfWork.Id,  projectStatus,
-        //     pagesNo,  description,  projectTopic,
-        //     calculatedServiceCharges,  maxBudget,
-        //     plannedBudget,  lastUpdate,  dateCreated,
-        //     deadline,  isPublished,  0)
-        //{
+        private Project(ApplicationUser customer, KindOfWork kindOfWork, ProjectStatus projectStatus,
+            int pagesNo, string description, string projectTopic,
+            decimal calculatedServiceCharges, decimal maxBudget,
+            decimal plannedBudget, DateTime lastUpdate, DateTime dateCreated,
+            DateTime deadline, bool isPublished)
+            : this(customer.Id, kindOfWork.Id, projectStatus,
+             pagesNo, description, projectTopic,
+             calculatedServiceCharges, maxBudget,
+             plannedBudget, lastUpdate, dateCreated,
+             deadline, isPublished, 0)
+        {
 
-        //}
+        }
     }
 }
