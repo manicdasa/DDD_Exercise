@@ -162,24 +162,11 @@ namespace GhostWriter.Domain.Entities
         /// </summary>
         public virtual ICollection<ServiceCharge> ServiceCharges { get; private set; }
 
-        private Project(ApplicationUser customer, KindOfWork kindOfWork, ProjectStatus projectStatus,
-            int pagesNo, string description, string projectTopic,
-            decimal calculatedServiceCharges, decimal maxBudget,
-            decimal plannedBudget, DateTime lastUpdate, DateTime dateCreated,
-            DateTime deadline, bool isPublished)
-            :this( customer.Id,  kindOfWork.Id,  projectStatus,
-             pagesNo,  description,  projectTopic,
-             calculatedServiceCharges,  maxBudget,
-             plannedBudget,  lastUpdate,  dateCreated,
-             deadline,  isPublished,  0)
-        {
-
-        }
         private Project(int customerId, int kindOfWorkId, ProjectStatus projectStatus,
-            int pagesNo, string description, string projectTopic,
-            decimal calculatedServiceCharges, decimal maxBudget, 
-            decimal plannedBudget, DateTime lastUpdate, DateTime dateCreated,
-            DateTime deadline, bool isPublished, int id)
+          int pagesNo, string description, string projectTopic,
+          decimal calculatedServiceCharges, decimal maxBudget,
+          decimal plannedBudget, DateTime lastUpdate, DateTime dateCreated,
+          DateTime deadline, bool isPublished, int id)
         {
             CustomerId = customerId;
             KindOfWorkId = kindOfWorkId;
@@ -196,5 +183,19 @@ namespace GhostWriter.Domain.Entities
             IsPublished = isPublished;
             Id = id;
         }
+        private Project(ApplicationUser customer, KindOfWork kindOfWork, ProjectStatus projectStatus,
+            int pagesNo, string description, string projectTopic,
+            decimal calculatedServiceCharges, decimal maxBudget,
+            decimal plannedBudget, DateTime lastUpdate, DateTime dateCreated,
+            DateTime deadline, bool isPublished)
+            :this( customer.Id,  kindOfWork.Id,  projectStatus,
+             pagesNo,  description,  projectTopic,
+             calculatedServiceCharges,  maxBudget,
+             plannedBudget,  lastUpdate,  dateCreated,
+             deadline,  isPublished,  0)
+        {
+
+        }
+      
     }
 }

@@ -5,7 +5,9 @@ WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
+
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
+# installs NodeJS and NPM
 RUN apt-get update -yq && apt-get upgrade -yq && apt-get install -yq curl git nano
 RUN curl -sL https://deb.nodesource.com/setup_15.x | bash - && apt-get install -yq nodejs build-essential
 WORKDIR /src

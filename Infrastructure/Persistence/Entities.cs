@@ -905,18 +905,6 @@ namespace GhostWriter.Infrastructure.Persistence
             .HasMany(x => x.Buzzwords)
             .WithMany(x => x.UserRoleDatas);
 
-            builder.Entity<Project>()
-            .HasMany(x => x.Buzzwords)
-            .WithMany(x => x.Projects);
-            
-            builder.Entity<Project>()
-            .HasMany(x => x.ExpertiseAreas)
-            .WithMany(x => x.Projects);
-
-            builder.Entity<Project>()
-            .HasMany(x => x.ServiceCharges)
-            .WithMany(x => x.Projects);
-
             builder.Entity<ApplicationUser>()
                 .HasMany(x => x.UserRoles)
                 .WithOne()

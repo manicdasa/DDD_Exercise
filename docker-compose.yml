@@ -1,0 +1,38 @@
+version: '3.4'
+
+networks:
+  local_system_network:
+
+volumes:
+  database_management_data:
+
+services:
+  webui:
+    image: ${DOCKER_REGISTRY-}webui
+    container_name: ghostwriter_webui
+    build:
+      context: .
+      dockerfile: GhostWriter/Dockerfile
+    environment:
+      - 'CONNECTIONSTRINGS__CONNSTR=Server=persistence;Port=5432;Database=GHW_Dev;User Id=postgres;Password=GRE_AICHIRO;'
+    networks:
+      - local_system_network
+
+  persistence:
+    image: postgres:12.3
+    container_name: ghostwriter_dbms
+    environment:
+      - POSTGRES_DB=GHW_Dev
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=GRE_AICHIRO
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U admin"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - database_management_data:/var/lib/postgresql/data:delegated
+    networks:
+      - local_system_network
+    ports:
+      - 11000:5432

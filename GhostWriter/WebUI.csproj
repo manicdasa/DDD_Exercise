@@ -12,6 +12,7 @@
     <NoWin32Manifest>true</NoWin32Manifest>
     <UserSecretsId>96179452-02c1-411b-9493-265e6d3a4d93</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
 
   <ItemGroup>

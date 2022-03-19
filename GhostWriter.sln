@@ -1,15 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30907.101
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebUI", "GhostWriter\WebUI.csproj", "{53A11105-EBD6-4D1B-A70F-0AE3B6FDF0C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{40C281C8-E653-4AB6-9F24-76336C6064D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{40C281C8-E653-4AB6-9F24-76336C6064D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{09A1C6C8-0125-40A8-BFD7-B93CDDE8244B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{09A1C6C8-0125-40A8-BFD7-B93CDDE8244B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{4280E9C8-88D3-44CC-9079-26948A4CF55F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{4280E9C8-88D3-44CC-9079-26948A4CF55F}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{59E3E1BE-6B28-4428-904E-B6C1B66DB492}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{4280E9C8-88D3-44CC-9079-26948A4CF55F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4280E9C8-88D3-44CC-9079-26948A4CF55F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4280E9C8-88D3-44CC-9079-26948A4CF55F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59E3E1BE-6B28-4428-904E-B6C1B66DB492}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59E3E1BE-6B28-4428-904E-B6C1B66DB492}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59E3E1BE-6B28-4428-904E-B6C1B66DB492}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59E3E1BE-6B28-4428-904E-B6C1B66DB492}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

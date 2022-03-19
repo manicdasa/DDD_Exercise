@@ -26,14 +26,14 @@ namespace GhostWriter.WebUI.Controllers
             if (exception is AuthorizationException) code = 401; // Not Found
             else if (exception is NotFoundException) code = 404; // Unauthorized
             else if (exception is Exception) code = 400; // Bad Request
-            SentrySdk.ConfigureScope(scope =>
-            {
-                scope.User = new User
-                {
-                    //Email = user.Email,
-                    Username = User.FindFirst(ClaimTypes.Name).Value
-                };
-            });
+            //SentrySdk.ConfigureScope(scope =>
+            //{
+            //    scope.User = new User
+            //    {
+            //        //Email = user.Email,
+            //        Username = User.FindFirst(ClaimTypes.Name).Value
+            //    };
+            //});
             SentrySdk.CaptureMessage(context.Error.Message);
             Response.StatusCode = code; // You can use HttpStatusCode enum instead
 
