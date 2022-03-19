@@ -45,6 +45,10 @@ namespace GhostWriter.Infrastructure.Configurations
             builder
             .HasMany(x => x.ServiceCharges)
             .WithMany(x => x.Projects);
+
+            builder.Navigation(x => x.Buzzwords);
+            builder.Navigation(x => x.ServiceCharges);
+            builder.Navigation(x => x.ExpertiseAreas);
         }
     }
 }

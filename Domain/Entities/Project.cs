@@ -50,7 +50,8 @@ namespace GhostWriter.Domain.Entities
                 var chargesAmount = _priceCalculatorService.CalculateServiceCharges(totalPrice, pagesNo);
 
 
-                var entity = new Project(customer, kindOfWork, ProjectStatus.Open, pagesNo, description, projectTopic, chargesAmount, totalPrice, totalPrice, DateTime.UtcNow, DateTime.UtcNow, deadline, isPublished);
+                var entity = new Project(customer.Id, kindOfWork.Id, ProjectStatus.Open, pagesNo, description, projectTopic,
+                    chargesAmount, totalPrice, totalPrice, DateTime.UtcNow, DateTime.UtcNow, deadline, isPublished, 0);
               
 
                 return entity;
@@ -150,17 +151,21 @@ namespace GhostWriter.Domain.Entities
         /// <summary>
         /// Project's expertise area
         /// </summary>
-        public virtual ICollection<ExpertiseArea> ExpertiseAreas { get; private set; }
+        public virtual ICollection<ExpertiseArea> ExpertiseAreas => _expertiseAreas; // { get; private set; }
+        private readonly List<ExpertiseArea> _expertiseAreas;
+
 
         /// <summary>
         /// Project's buzzwords
         /// </summary>
-        public virtual ICollection<Buzzword> Buzzwords { get; private set; }
+        public virtual ICollection<Buzzword> Buzzwords => _buzzwords;// { get; private set; }
+        private readonly List<Buzzword> _buzzwords;
 
         /// <summary>
         /// Service charges added to the project's cost
         /// </summary>
-        public virtual ICollection<ServiceCharge> ServiceCharges { get; private set; }
+        public virtual ICollection<ServiceCharge> ServiceCharges => _serviceCharges;
+        private readonly List<ServiceCharge> _serviceCharges;
 
         private Project(int customerId, int kindOfWorkId, ProjectStatus projectStatus,
           int pagesNo, string description, string projectTopic,
@@ -183,19 +188,18 @@ namespace GhostWriter.Domain.Entities
             IsPublished = isPublished;
             Id = id;
         }
-        private Project(ApplicationUser customer, KindOfWork kindOfWork, ProjectStatus projectStatus,
-            int pagesNo, string description, string projectTopic,
-            decimal calculatedServiceCharges, decimal maxBudget,
-            decimal plannedBudget, DateTime lastUpdate, DateTime dateCreated,
-            DateTime deadline, bool isPublished)
-            :this( customer.Id,  kindOfWork.Id,  projectStatus,
-             pagesNo,  description,  projectTopic,
-             calculatedServiceCharges,  maxBudget,
-             plannedBudget,  lastUpdate,  dateCreated,
-             deadline,  isPublished,  0)
-        {
+        //private Project(ApplicationUser customer, KindOfWork kindOfWork, ProjectStatus projectStatus,
+        //    int pagesNo, string description, string projectTopic,
+        //    decimal calculatedServiceCharges, decimal maxBudget,
+        //    decimal plannedBudget, DateTime lastUpdate, DateTime dateCreated,
+        //    DateTime deadline, bool isPublished)
+        //    :this( customer.Id,  kindOfWork.Id,  projectStatus,
+        //     pagesNo,  description,  projectTopic,
+        //     calculatedServiceCharges,  maxBudget,
+        //     plannedBudget,  lastUpdate,  dateCreated,
+        //     deadline,  isPublished,  0)
+        //{
 
-        }
-      
+        //}
     }
 }
