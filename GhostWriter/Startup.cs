@@ -1,32 +1,22 @@
+using FluentValidation.AspNetCore;
 using GhostWriter.Application;
 using GhostWriter.Infrastructure;
+using GhostWriter.Infrastructure.Identity;
+using GhostWriter.WebUI.Hubs;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
-using System;
-using System.Text;
-using System.Linq;
 using NSwag;
 using NSwag.Generation.Processors.Security;
-using GhostWriter.Infrastructure.Identity;
-using GhostWriter.WebUI.Hubs;
-using GhostWriter.WebUI.Hubs.Clients;
-using Microsoft.AspNetCore.SignalR;
-using Microsoft.Extensions.DependencyInjection.Extensions;
-using Microsoft.Extensions.Options;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Diagnostics;
-using Microsoft.AspNetCore.Http;
 using Sentry.AspNetCore;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace GhostWriter
 {
@@ -46,8 +36,10 @@ namespace GhostWriter
             {
                 services.AddApplication();
                 services.AddInfrastructure(Configuration);
-                services.AddControllersWithViews().AddNewtonsoftJson(options =>
+                services.AddControllersWithViews().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<AssemblyReference>()).AddNewtonsoftJson(options =>
                         options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+
+             
 
                 // In production, the React files will be served from this directory
                 services.AddSpaStaticFiles(configuration =>

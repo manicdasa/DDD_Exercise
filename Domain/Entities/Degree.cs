@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FluentResults;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -25,5 +26,12 @@ namespace GhostWriter.Domain.Entities
         /// Description
         /// </summary>
         public string Description { get; set; }
+
+        public static Degree Bachelor => new Degree() { Id = 1, Stage = 1, Value = "Bachelor", Description = "Bachelor" };
+
+        public static Result<Degree> From(int degreeId)
+        {
+            return Result.Ok(Degree.Bachelor);
+        } 
     }
 }

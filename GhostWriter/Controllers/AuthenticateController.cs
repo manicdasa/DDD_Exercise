@@ -35,9 +35,9 @@ namespace GhostWriter.WebUI.Controllers
 
         [HttpPost]
         [Route("login")]
-        [ProducesResponseType(typeof(LogInResponse), 200)]
-        [ProducesResponseType(typeof(string), 400)]
-        [ProducesResponseType(typeof(string), 401)]
+        [ProducesResponseType(typeof(LogInResponse), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(string), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]
         public async Task<IActionResult> Login([FromBody] LoginModel model)
         {
             if (!ModelState.IsValid)

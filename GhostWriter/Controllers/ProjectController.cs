@@ -17,6 +17,7 @@ using Microsoft.AspNetCore.SignalR;
 using GhostWriter.Application.Defaults;
 using System.Linq;
 using System;
+using Microsoft.AspNetCore.Http;
 
 namespace GhostWriter.WebUI.Controllers
 {
@@ -34,11 +35,12 @@ namespace GhostWriter.WebUI.Controllers
             _notificationHubContext = hubContext;
         }
 
+        [ProducesResponseType(typeof(string), StatusCodes.Status400BadRequest)]
         [HttpPost(nameof(CreateProject))]
         public async Task<ActionResult<ExtendedOutputModelTemp<NotificationSignalRDTO>>> CreateProject(CreateProjectCommand command)
         {
             CreateProjectCommandExtended request = (CreateProjectCommandExtended)_mapper.Map(command, typeof(CreateProjectCommand), typeof(CreateProjectCommandExtended));
-            request.CustomerUsername = User.FindFirst(ClaimTypes.Name).Value;
+            request.CustomerUsername = User.FindFirstValue(ClaimTypes.Name);
             request.IsPublished = true;
 
             var result = await Mediator.Send(request);
